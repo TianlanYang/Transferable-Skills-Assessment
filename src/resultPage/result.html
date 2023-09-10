@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../../dist/result.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        .div_id2_1:hover+.div_id2_2 {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .div_id3_1:hover+.div_id3_2 {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .div_id4_1:hover+.div_id4_2 {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .div_id5_1:hover+.div_id5_2 {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .div_id6_1:hover+.div_id6_2 {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .textbox {
+            position: absolute;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgb(23 37 84);
+            z-index: 1000;
+            opacity: 0;
+            transition: visibility 0s, opacity 1s;
+            border: 3px solid rgb(23 37 84);
+            text-indent: 0%;
+            color: rgb(209 213 219);
+            /* Ensure the textbox appears on top */
+        }
+
+        .textbox.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .container {
+            position: relative;
+            height: 88vh;
+            /* Set container height to 75% of the viewport height */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="z-10 w-full h-16 bg-blue-950 relative">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center h-16">
+                <div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex items-center">
+                            <a class="text-gray-300 hover:bg-gray-700 block hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                href="https://immense-sea-87491.herokuapp.com/">Back to STAS Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 text-center">
+                    <p class="text-gray-300 text-5xl font-semibold" style="font-size: x-large; margin-right: 16%;">My Skills Map</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container z-20 mx-auto justify-center items-center relative">
+        <div href="#" class="absolute font-semibold text-lg" style="top: 45%; left: 48%">
+            <div class="flex">
+                <button id="1" class="text-center rounded-full btn btn-neutral w-12 h-12 z-10"></button>
+                <p class="absolute mt-20 active">Tianlan Yang</p>
+            </div>
+        </div>
+
+        <!-- 上方绿色分支 -->
+        <div href="#" class="absolute" style="top: 25%; left: 48%">
+            <div class="flex div_id2_1">
+                <!-- <button class="text-center rounded-full btn btn-success hover:bg-emerald-500 bg-[#01ff1f] w-12 h-12 z-10"
+                    id="2"></button> -->
+                <button class="text-center rounded-full btn-success hover:bg-emerald-500" id="2"
+                    style="background-color: #01ff1f; width: 3rem; height: 3rem;"></button>
+                <p class="absolute ml-16 sport text-sm" style="top: 20%">Main1-sajkhjkfd</p>
+            </div>
+
+            <div class="div_id2_2">
+                <a href="#" class="absolute flex" style="top: -100%; left: -280%">
+                    <button
+                        class="div_id2_2_1 text-center rounded-full btn btn-success hover:bg-emerald-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #01ff1f;" id="2.1"></button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break-words" style="font-size: 12px; line-height: 16px; left: -190%">
+                        123
+                    </p>
+                </a>
+                <a href="#" class="absolute flex" style="top: -250%; left: -160%">
+                    <button
+                        class="div_id2_2_2 text-center rounded-full btn btn-success hover:bg-emerald-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #01ff1f;" id="2.2"></button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break" style="font-size: 12px; line-height: 16px; left: -190%">
+                        Basketball
+                    </p>
+                </a>
+                <a href="#" class="absolute flex" style="top: -300%; left: 10%">
+                    <button
+                        class="div_id2_2_3 text-center rounded-full btn btn-success hover:bg-emerald-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #01ff1f;" id="2.3"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">Main1.33333</p>
+                </a>
+                <a href="#" class="absolute flex" style="top: -250%; left: 180%">
+                    <button
+                        class="div_id2_2_4 text-center rounded-full btn btn-success hover:bg-emerald-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #01ff1f;" id="2.4"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">Main1.4</p>
+                </a>
+                <a href="#" class="absolute flex" style="top: -100%; left: 300%">
+                    <button
+                        class="div_id2_2_5 text-center rounded-full btn btn-success hover:bg-emerald-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #01ff1f;" id="2.5"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">Main1.5</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 左边分支(黄色) -->
+        <div href="#" class="absolute" style="left: 36%; top: 40%">
+            <div class="flex div_id3_1">
+                <!-- <button id="3"
+                    class="text-center rounded-full btn btn-warning hover:bg-yellow-500 w-12 h-12 z-10"></button> -->
+                <button class="text-center rounded-full btn-warning hover:bg-yellow-500" id="3"
+                    style="background-color: #ff9a00; width: 3rem; height: 3rem;"></button>
+                <p class="absolute ml-16 Hobby text-sm" style="top: -40%">
+                    Main2-sdfskljflk
+                </p>
+            </div>
+            <div class="div_id3_2">
+                <a href=" #" class="absolute flex" style="top: -260%; left: -300%">
+                    <button
+                        class="div_id3_2_1 text-center rounded-full btn btn-warning hover:bg-yellow-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #ff9a00;" id="3.1">
+                    </button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break-all" style="font-size: 12px; line-height: 16px; left: -190%">
+                        Main2.1
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: -130%; left: -400%">
+                    <button
+                        class="div_id3_2_2 text-center rounded-full btn btn-warning hover:bg-yellow-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #ff9a00;" id="3.2">
+                    </button>
+                    <p class="absolute mr-16 text-sm w-14 h-16" style="font-size: 12px; line-height: 16px; left: -260%">
+                        Main2.2fdfgdfgdfg
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 20%; left: -450%">
+                    <button
+                        class="div_id3_2_3 text-center rounded-full btn btn-warning hover:bg-yellow-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #ff9a00;" id="3.3">
+                    </button>
+                    <p class="absolute mr-16 text-sm w-16 h-16" style="font-size: 12px; line-height: 16px; left: -190%">
+                        Main2.3
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 170%; left: -400%">
+                    <button
+                        class="div_id3_2_4 text-center rounded-full btn btn-warning hover:bg-yellow-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #ff9a00;" id="3.4">
+                    </button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break-all" style="font-size: 12px; line-height: 16px; left: -190%">
+                        Main2.4
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 300%; left: -300%">
+                    <button
+                        class="div_id3_2_5 text-center rounded-full btn btn-warning hover:bg-yellow-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #ff9a00;" id="3.5">
+                    </button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break-all" style="font-size: 12px; line-height: 16px; left: -190%">
+                        Main2.5
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 左下角分支（深绿色） -->
+        <div href="#" class="absolute" id="4" style="left: 40%; top: 65%">
+            <div class="flex div_id4_1">
+                <!-- <button id="4" class="text-center rounded-full btn btn-accent w-12 h-12 z-10"></button> -->
+                <button class="text-center rounded-full btn hover:bg-purple-700" id="4"
+                    style="background-color: #bd00ff; width: 3rem; height: 3rem;"></button>
+                <p class="absolute mr-16 position text-sm" style="left: -150%;">
+                    Other Option
+                </p>
+            </div>
+            <div class="div_id4_2">
+                <a href=" #" class="absolute flex" style="top: 100%; left: -325%">
+                    <button class="div_id4_2_1 text-center rounded-full btn hover:bg-purple-700 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #bd00ff;" id="4.1">
+                    </button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break-all" style="white-space: nowrap; font-size: 12px; line-height: 16px; left: -190%">
+                        Main3.1
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 240%; left: -310%">
+                    <button class="div_id4_2_2 text-center rounded-full btn hover:bg-purple-500 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #bd00ff;" id="4.2">
+                    </button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break-all" style="font-size: 12px; line-height: 16px; left: -190%">
+                        Main3.2
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 355%; left: -250%">
+                    <button class="div_id4_2_3 text-center rounded-full btn hover:bg-purple-700 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #bd00ff;" id="4.3"></button>
+                    <p class="absolute mr-16 text-sm w-16 h-16 break-all" style="font-size: 12px; line-height: 16px; left: -190%">
+                        Main3.3
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 400%; left: -120%">
+                    <button class="div_id4_2_4 text-center rounded-full btn hover:bg-purple-700 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #bd00ff;" id="4.4"></button>
+                    <p class="absolute ml-10 text-sm w-16 h-16 break-all" style="font-size: 12px; line-height: 16px; white-space: nowrap;">
+                        Main3.4
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 340%; left: 50%">
+                    <button class="div_id4_2_5 text-center rounded-full btn hover:bg-purple-700 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #bd00ff;" id="4.5"></button>
+                    <p class="absolute ml-10 text-sm w-16 h-16 break-all" style="font-size: 12px; line-height: 16px;">
+                        Main3.5
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 右下角分支 -->
+        <div href="#" class="absolute" id="5" style="right: 40%; top: 65%">
+            <div class="flex div_id5_1">
+                <!-- <button class="text-center rounded-full btn btn-error hover:bg-rose-500 w-12 h-12 z-10"></button> -->
+                <button class="text-center rounded-full btn hover:bg-yellow-300" id="5"
+                    style="background-color: #e3ff00; width: 3rem; height: 3rem;"></button>
+                <p class="absolute ml-16 text-sm subject">Main4-henduohenduo</p>
+            </div>
+            <div class="div_id5_2">
+                <a href="#" class="absolute flex" style="top: 100%; right: -325%">
+                    <button
+                        class="div_id5_2_1 text-center rounded-full btn hover:bg-yellow-300 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #e3ff00;" id="5.1"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">Main4.1</p>
+                </a>
+                <a href="#" class="absolute flex" style="top: 240%; right: -310%">
+                    <button
+                        class="div_id5_2_2 text-center rounded-full btn hover:bg-yellow-300 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #e3ff00;" id="5.2"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px; white-space: nowrap;">Main4.2</p>
+                </a>
+                <a href="#" class="absolute flex" style="top: 355%; right: -250%">
+                    <button
+                        class="div_id5_2_3 text-center rounded-full btn hover:bg-yellow-300 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #e3ff00;" id="5.3"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px; white-space: nowrap;">Main4.3</p>
+                </a>
+                <a href="#" class="absolute flex" style="top: 400%; right: -120%">
+                    <button
+                        class="div_id5_2_4 text-center rounded-full btn hover:bg-yellow-300 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #e3ff00;" id="5.4"></button>
+                    <p class="absolute mr-16 text-sm" style="font-size: 12px; line-height: 16px; left: -190%">Main4.4</p>
+                </a>
+                <a href="#" class="absolute flex" style="top: 340%; right: 50%">
+                    <button
+                        class="div_id5_2_5 text-center rounded-full btn hover:bg-yellow-300 w-4 h-8 min-w-0 min-h-0 z-20"
+                        style="background-color: #e3ff00;" id="5.5"></button>
+                    <p class="absolute mr-16 text-sm" style="font-size: 12px; line-height: 16px; left: -210%">Main4.5</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 右边分支（蓝色） -->
+        <div href="#" class="absolute" style="right: 36%; top: 40%">
+            <div class="flex div_id6_1">
+                <!-- <button id="6" class="text-center rounded-full btn btn-info hover:bg-sky-500 w-12 h-12 z-10"></button> -->
+                <button class="text-center rounded-full btn-info hover:bg-sky-500" id="6"
+                    style="background-color: #0078ff; width: 3rem; height: 3rem;"></button>
+                <p class="absolute mr-16 career text-sm w-16 break-all" style="left: -120%; top: -40%;">Main5-hendduohenduo</p>
+            </div>
+            <div class="div_id6_2">
+                <a href=" #" class="absolute flex" style="top: -260%; right: -300%">
+                    <button class="text-center rounded-full btn btn-info hover:bg-sky-500 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #0078ff;" id="6.1"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">
+                        Main5.1
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: -130%; right: -400%">
+                    <button class="text-center rounded-full btn btn-info hover:bg-sky-500 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #0078ff;" id="6.2"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">
+                        Main5.2
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 20%; right: -450%">
+                    <button class="text-center rounded-full btn btn-info hover:bg-sky-500 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #0078ff;" id="6.3"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">
+                        Main5.3
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 170%; right: -400%">
+                    <button class="text-center rounded-full btn btn-info hover:bg-sky-500 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #0078ff;" id="6.4"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">
+                        Main5.4
+                    </p>
+                </a>
+                <a href=" #" class="absolute flex" style="top: 300%; right: -300%">
+                    <button class="text-center rounded-full btn btn-info hover:bg-sky-500 w-4 h-8 min-w-0 min-h-0
+                        z-20" style="background-color: #0078ff;" id="6.5"></button>
+                    <p class="absolute ml-10 text-sm" style="font-size: 12px; line-height: 16px;">
+                        Main5.5
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module">
+
+        //console.log("script");
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+
+        import { getDatabase, get, set, update, remove, ref, child, onValue }
+            from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+
+
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            onAuthStateChanged,
+            signOut
+        }
+            from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCkahzJE1QQxekDHPVHp4jM2CGS9MJuHyQ",
+            authDomain: "stsa-compass.firebaseapp.com",
+            projectId: "stsa-compass",
+            storageBucket: "stsa-compass.appspot.com",
+            messagingSenderId: "952259702189",
+            appId: "1:952259702189:web:0c4104d466caf2e7974524"
+        };
+
+
+
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const auth = getAuth(app);
+
+        const studentName = document.querySelector(".active");
+        const sport = document.querySelector(".sport");
+        const Hobby = document.querySelector(".Hobby");
+        const position = document.querySelector(".position");
+        //const Hobby2 = document.querySelector(".Hobby2");
+        const subject = document.querySelector(".subject");
+        const career = document.querySelector(".career");
+
+        //const userFulldataRef = ref(db);
+        const fullNameValue = localStorage.getItem('fullName');
+        console.log("jjjjjjj" + fullNameValue)
+
+
+        const userListRef = ref(db, 'UserList/' + fullNameValue + '/Answers');
+        const sportRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Sport');
+        const hobbyRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Hobby');
+        const subjectRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Subject');
+        const careertRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Desired_Career');
+        const positionRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Position_In_Sport');
+        const support_person1_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person1_email');
+        const support_person2_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person2_email');
+        //const hobby2Ref = ref(db, 'UserList/' + fullNameValue + '/Answers/Second_Favorite_Hobby');
+
+
+
+
+        get(sportRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const sportValue = snapshot.val();
+                sport.textContent = sportValue;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+
+        get(userListRef).then((snapshot) => {
+            if (snapshot.exists()) {
+
+                //console.log("hhhhhhhh"+fullNameValue);
+                //console.log("hhhhhhhh"+ userListRef);
+
+                var data1 = snapshot.val();
+                console.log(data1);
+
+                // const dataName = data1.Name;
+                studentName.textContent = fullNameValue;
+
+
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+        get(hobbyRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const hobbyVal = snapshot.val();
+                Hobby.textContent = hobbyVal;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+        // get(hobby2Ref).then((snapshot) => {
+        //     if (snapshot.exists()) {
+        //         const hobby2Val = snapshot.val();
+        //         Hobby2.textContent = hobby2Val;
+
+        //         //console.log("88888" + sportValue); // This will print the value of Sport
+        //         // Here you can use sportValue as per your requirement
+        //     }
+        //     else {
+        //         console.log("No data available");
+        //     }
+        // }).catch((error) => {
+        //     console.error(error);
+        // });
+
+        get(positionRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const positionVal = snapshot.val();
+                position.textContent = positionVal;
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+        get(subjectRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const subjectVal = snapshot.val();
+                subject.textContent = subjectVal;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+        get(careertRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const careerVal = snapshot.val();
+                career.textContent = careerVal;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+
+
+
+        async function getBase64ImageFromLocalPath(path) {
+            const response = await fetch(path);
+            const blob = await response.blob();
+
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onloadend = function () {
+                    resolve(reader.result);
+                }
+                reader.onerror = reject;
+                reader.readAsDataURL(blob);
+            });
+        }
+
+
+
+
+
+        //fetch the whole data as pdf and for email function
+        //pdf functionnalitty
+        const generatePDF = async (base64Image) => {
+
+            const dataRef2 = ref(db, 'UserList/' + fullNameValue + '/Answers');
+
+            const snapshot2 = await get(dataRef2);
+
+
+            const data2 = snapshot2.val();
+
+
+
+            let content = `Here is a profile summary for ${fullNameValue}.\nYou can use this information to help your student in their educational journey and career aspirations.\n\n`;
+
+
+            const fields = [
+                'Full_Name', 'Aware_Major', 'Taken_Courses', 'Good_Gpa',
+                'Desired_Career', 'Dream_Company', 'Pursue_Ppl', 'Favorite_Sport',
+                'Position_In_Sport', 'Favorite_Subject', 'Favorite_Hobby'
+            ];
+
+            for (const field of fields) {
+                if (data2[field]) {
+                    content += `${field}: ${data2[field]}\n`;
+                }
+            }
+
+            content += `\n\n${fullNameValue} was asked to write 3 goals for a 3 month time period.\nHere you can help keep your student accountable to these goals.\n\n`;
+
+            // 如果有目标字段，则添加它们
+            content += `Goals1: ${data2['Goals1'] || ' '}\n`;
+            content += `Goals2: ${data2['Goals2'] || ' '}\n`;
+            content += `Goals3: ${data2['Goals3'] || ' '}\n`;
+
+            content += `\nAlong with the email you will see a Skills Map for ${fullNameValue}.\nThe skills map is a snapshot of your students’ personal skills and strengths.\nThis is a tool that can be used identify a major, career field or you can use this to build their professional\nprofile/resume. \n\n`;
+
+            const doc = new jsPDF({
+                orientation: 'portrait',
+                unit: 'mm',
+                format: 'a4'
+            });
+
+
+            //add logo
+            const imgWidth = 50; // Set as desired
+            const imgHeight = 50; // Set as desired
+            const xPosition = (doc.internal.pageSize.getWidth() - imgWidth) / 2;
+            const yPosition = 10; // Top margin
+
+            doc.addImage(base64Image, 'JPEG', xPosition, yPosition, imgWidth, imgHeight);
+
+
+
+
+            doc.setFont('helvetica');
+            doc.setFontSize(12);
+
+            doc.text(content, 10, 30 + imgHeight);
+
+            doc.setLineHeightFactor(2.0);
+
+            return {
+                doc: doc,
+                dataUri: doc.output('datauristring')
+            }
+
+
+            //return doc.output('datauristring');
+
+            //doc.save('Information.pdf');
+        }
+        //  generatePDF();
+
+
+
+        async function generatePDFAndScreenshot() {
+
+            const base64Image = await getBase64ImageFromLocalPath('logo.jpeg');
+            // Generate the PDF
+            const { doc, dataUri } = await generatePDF(base64Image);
+
+            // Generate the screenshot
+            let screenshotBase64;
+            await html2canvas(document.body).then(canvas => {
+                screenshotBase64 = canvas.toDataURL(); // Split to remove the "data:image/png;base64," part
+            });
+
+
+            //doc.addImage(screenshotBase64, 'PNG', 20, 20, 100, 100);
+
+            return {
+                pdf: doc.output('datauristring'),
+                screenshot: screenshotBase64
+            };
+        }
+
+        async function sendPDFAndScreenshotAsAttachments() {
+            try {
+                const attachments = await generatePDFAndScreenshot();
+
+                // Fetch ccEmail and bccEmail from database
+                const [ccSnapshot, bccSnapshot] = await Promise.all([
+                    get(support_person1_emailRef),
+                    get(support_person2_emailRef)
+                ]);
+
+                let ccEmail = ccSnapshot.exists() ? ccSnapshot.val() : "";
+                let bccEmail = bccSnapshot.exists() ? bccSnapshot.val() : "";
+
+                var emailParams = {
+                    pdf_content: attachments.pdf,
+                    screenshot_content: attachments.screenshot
+                };
+
+                // Only add to emailParams if the email is valid
+                if (isValidEmail(ccEmail)) {
+                    emailParams.custom_cc = ccEmail;
+                }
+
+                if (isValidEmail(bccEmail)) {
+                    emailParams.custom_bcc = bccEmail;
+                }
+
+                try {
+                    await emailjs.send('service_t7kccom', 'template_8rl0sz7', emailParams);
+                    console.log('Email sent with PDF and Screenshot!');
+                } catch (error) {
+                    console.log('Error sending attachments:', error);
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        function isValidEmail(email) {
+            var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+        }
+
+        //  document.addEventListener('DOMContentLoaded', function () {
+        //      sendPDFAndScreenshotAsAttachments();
+        //  });
+
+
+
+
+
+
+
+
+
+        function createLineElement(x, y, length, angle) {
+            var line = document.createElement("div");
+            var styles =
+                "border: 1px solid black; " +
+                "width: " +
+                length +
+                "px; " +
+                "height: 0px; " +
+                "-moz-transform: rotate(" +
+                angle +
+                "rad); " +
+                "-webkit-transform: rotate(" +
+                angle +
+                "rad); " +
+                "-o-transform: rotate(" +
+                angle +
+                "rad); " +
+                "-ms-transform: rotate(" +
+                angle +
+                "rad); " +
+                "position: absolute; " +
+                "top: " +
+                y +
+                "px; " +
+                "left: " +
+                x +
+                "px; ";
+            line.setAttribute("style", styles);
+            return line;
+        }
+
+        function createLine(x1, y1, x2, y2) {
+            var a = x1 - x2,
+                b = y1 - y2,
+                c = Math.sqrt(a * a + b * b);
+
+            var sx = (x1 + x2) / 2,
+                sy = (y1 + y2) / 2;
+
+            var x = sx - c / 2,
+                y = sy;
+
+            var alpha = Math.PI - Math.atan2(-b, a);
+
+            return createLineElement(x, y, c, alpha);
+        }
+        // 获取元素坐标
+        function getElementOffset(element) {
+            let offset = {
+                left: 0,
+                top: 0,
+            };
+            let current = element.offsetParent;
+
+            offset.left += element.offsetLeft;
+            offset.top += element.offsetTop;
+
+            while (current !== null) {
+                offset.left += current.offsetLeft;
+                offset.top += current.offsetTop;
+                current = current.offsetParent;
+            }
+            return offset;
+        }
+
+        let lineElements = [];
+
+        function drawLine(id1, id2) {
+            const lineId = id1 + "-" + id2;
+
+            if (lineElements.includes(lineId)) {
+                // Line already exists, do nothing
+                return;
+            }
+
+            const element1 = document.getElementById(id1);
+            const element2 = document.getElementById(id2);
+
+            const element1Rect = element1.getBoundingClientRect();
+            const element2Rect = element2.getBoundingClientRect();
+
+            const x1 = element1Rect.left + element1Rect.width / 2;
+            const y1 = element1Rect.top + element1Rect.height / 2;
+            const x2 = element2Rect.left + element2Rect.width / 2;
+            const y2 = element2Rect.top + element2Rect.height / 2;
+
+            const lineElement = createLine(x1, y1, x2, y2);
+            lineElement.id = lineId;
+            document.body.appendChild(lineElement);
+            lineElements.push(lineId);
+        }
+
+
+        function removeLine(id1, id2) {
+            const lineId = id1 + "-" + id2;
+            const lineElement = document.getElementById(lineId);
+            if (lineElement) {
+                document.body.removeChild(lineElement);
+                const index = lineElements.indexOf(lineId);
+                if (index !== -1) {
+                    //The array.splice(index, 1) method is used to modify an array by removing or replacing elements at a specific index.
+                    lineElements.splice(index, 1);
+                }
+            }
+        }
+
+
+        drawLine("1", "2");
+        drawLine("3", "1");
+        drawLine("4", "1");
+        drawLine("5", "1");
+        drawLine("6", "1");
+
+        const div_id2_1 = document.querySelector(".div_id2_1");
+        const div_id2_2 = document.querySelector(".div_id2_2");
+
+        const div_id3_1 = document.querySelector(".div_id3_1");
+        const div_id3_2 = document.querySelector(".div_id3_2");
+
+        const div_id4_1 = document.querySelector(".div_id4_1");
+        const div_id4_2 = document.querySelector(".div_id4_2");
+
+        const div_id5_1 = document.querySelector(".div_id5_1");
+        const div_id5_2 = document.querySelector(".div_id5_2");
+
+        const div_id6_1 = document.querySelector(".div_id6_1");
+        const div_id6_2 = document.querySelector(".div_id6_2");
+
+
+        // Define a flag to track whether lines are currently drawn
+        let linesDrawn_1 = false;
+
+        // Function to draw lines
+        function drawAllLines_1() {
+            //event.preventDefault();
+            div_id2_2.style.display = "block";
+            drawLine("2.1", "2");
+            drawLine("2.2", "2");
+            drawLine("2.3", "2");
+            drawLine("2.4", "2");
+            drawLine("2.5", "2");
+            linesDrawn_1 = true;
+        }
+
+        // Function to remove all lines
+        function removeAllLines_1() {
+            //event.preventDefault();
+            div_id2_2.style.display = "none";
+            removeLine("2.1", "2");
+            removeLine("2.2", "2");
+            removeLine("2.3", "2");
+            removeLine("2.4", "2");
+            removeLine("2.5", "2");
+            linesDrawn_1 = false;
+        }
+
+        // Call drawAllLines initially to draw all lines when the page is opened
+        drawAllLines_1();
+
+        // Add a click event listener to div_id2_1
+        div_id2_1.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (linesDrawn_1) {
+                // If lines are drawn, remove them
+                removeAllLines_1();
+            }
+        });
+
+        // Add a hover event listener to div_id2_1
+        div_id2_1.addEventListener("mouseenter", () => {
+            if (!linesDrawn_1) {
+                // If lines are not drawn, draw them
+                drawAllLines_1();
+            }
+        });
+
+
+
+
+        // Define a flag to track whether lines are currently drawn
+        let linesDrawn_2 = false;
+
+        // Function to draw lines
+        function drawAllLines_2() {
+            //event.preventDefault();
+            div_id3_2.style.display = "block";
+            drawLine("3.1", "3");
+            drawLine("3.2", "3");
+            drawLine("3.3", "3");
+            drawLine("3.4", "3");
+            drawLine("3.5", "3");
+            linesDrawn_2 = true;
+        }
+
+        // Function to remove all lines
+        function removeAllLines_2() {
+            //event.preventDefault();
+            div_id3_2.style.display = "none";
+            removeLine("3.1", "3");
+            removeLine("3.2", "3");
+            removeLine("3.3", "3");
+            removeLine("3.4", "3");
+            removeLine("3.5", "3");
+            linesDrawn_2 = false;
+        }
+
+        // Call drawAllLines initially to draw all lines when the page is opened
+        drawAllLines_2();
+
+        // Add a click event listener to div_id2_1
+        div_id3_1.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (linesDrawn_2) {
+                // If lines are drawn, remove them
+                removeAllLines_2();
+            }
+        });
+
+        // Add a hover event listener to div_id2_1
+        div_id3_1.addEventListener("mouseenter", () => {
+            if (!linesDrawn_2) {
+                // If lines are not drawn, draw them
+                drawAllLines_2();
+            }
+        });
+
+
+        let linesDrawn_3 = false;
+
+        function drawAllLines_3() {
+            //event.preventDefault();
+            div_id4_2.style.display = "block";
+            drawLine("4", "4.1");
+            drawLine("4", "4.2");
+            drawLine("4", "4.3");
+            drawLine("4", "4.4");
+            drawLine("4", "4.5");
+            linesDrawn_3 = true;
+        }
+
+        function removeAllLines_3() {
+            //event.preventDefault();
+            div_id4_2.style.display = "none";
+            removeLine("4", "4.1");
+            removeLine("4", "4.2");
+            removeLine("4", "4.3");
+            removeLine("4", "4.4");
+            removeLine("4", "4.5");
+            linesDrawn_3 = false;
+        }
+
+        drawAllLines_3();
+
+        div_id4_1.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (linesDrawn_3) {
+                removeAllLines_3();
+            }
+        });
+
+        div_id4_1.addEventListener("mouseenter", () => {
+            if (!linesDrawn_3) {
+                drawAllLines_3();
+            }
+        });
+
+
+
+        let linesDrawn_4 = false;
+
+        function drawAllLines_4() {
+            //event.preventDefault();
+            div_id5_2.style.display = "block";
+            drawLine("5", "5.1");
+            drawLine("5", "5.2");
+            drawLine("5", "5.3");
+            drawLine("5", "5.4");
+            drawLine("5", "5.5");
+            linesDrawn_4 = true;
+        }
+
+        function removeAllLines_4() {
+            //event.preventDefault();
+            div_id5_2.style.display = "none";
+            removeLine("5", "5.1");
+            removeLine("5", "5.2");
+            removeLine("5", "5.3");
+            removeLine("5", "5.4");
+            removeLine("5", "5.5");;
+            linesDrawn_4 = false;
+        }
+
+        drawAllLines_4();
+
+        div_id5_1.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (linesDrawn_4) {
+                removeAllLines_4();
+            }
+        });
+
+        div_id5_1.addEventListener("mouseenter", () => {
+            if (!linesDrawn_4) {
+                drawAllLines_4();
+            }
+        });
+
+
+        let linesDrawn_5 = false;
+
+        function drawAllLines_5() {
+            //event.preventDefault();
+            div_id6_2.style.display = "block";
+            drawLine("6.1", "6");
+            drawLine("6.2", "6");
+            drawLine("6.3", "6");
+            drawLine("6.4", "6");
+            drawLine("6.5", "6");
+            linesDrawn_5 = true;
+        }
+
+        function removeAllLines_5() {
+            //event.preventDefault();
+            div_id6_2.style.display = "none";
+            removeLine("6.1", "6");
+            removeLine("6.2", "6");
+            removeLine("6.3", "6");
+            removeLine("6.4", "6");
+            removeLine("6.5", "6");
+            linesDrawn_5 = false;
+        }
+
+        drawAllLines_5();
+
+        div_id6_1.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (linesDrawn_5) {
+                removeAllLines_5();
+            }
+        });
+
+        div_id6_1.addEventListener("mouseenter", () => {
+            if (!linesDrawn_5) {
+                drawAllLines_5();
+            }
+        });
+
+
+
+        //left upper textbox
+        const textBoxFlags = {};
+        let activeTextbox = null;
+
+        function showTextBox(elementId, content, width, height) {
+            hideActiveTextBox();
+            hideActiveTextBoxRight();
+
+            // if (textBoxFlags[elementId]) {
+            //     return; // Exit if textbox is already shown for this element
+            // }
+
+            const textBox = document.createElement("textarea");
+            textBox.classList.add("textbox");
+            textBox.style.width = "240px"; // Set the desired width
+            textBox.style.height = "200px"; // Set the desired height
+            textBox.style.overflow = "auto";
+            textBox.style.resize = "both";
+            textBox.value = content; // Set the content of the textbox
+            document.body.appendChild(textBox);
+
+            const element = document.getElementById(elementId);
+            const rect = element.getBoundingClientRect();
+
+            // Calculate the position based on the viewport
+            const viewportLeft = 20; // Adjust this value as needed
+            const viewportTop = 70; // Adjust this value as needed
+
+            textBox.style.top = (viewportTop + window.scrollY) + "px";
+            textBox.style.left = viewportLeft + "px";
+
+            textBox.classList.add("show");
+
+            activeTextbox = textBox;
+
+            textBoxFlags[elementId] = true;
+        }
+
+        function hideActiveTextBox() {
+            if (activeTextbox) {
+                activeTextbox.remove();
+                activeTextbox = null;
+            }
+        }
+
+
+        //right upper textbox
+        const textBoxFlags_rt = {};
+        let activeTextbox_rt = null;
+
+        function showRightTextBox(elementId, content, width, height) {
+            hideActiveTextBox();
+            hideActiveTextBoxRight();
+
+            const textBox = document.createElement("textarea");
+            textBox.classList.add("textbox");
+            textBox.style.width = "240px"; // Set the desired width
+            textBox.style.height = "200px"; // Set the desired height
+            textBox.style.overflow = "auto";
+            textBox.style.resize = "both";
+            textBox.value = content; // Set the content of the textbox
+            document.body.appendChild(textBox);
+
+            const element = document.getElementById(elementId);
+            const rect = element.getBoundingClientRect();
+
+            // Calculate the position based on the viewport
+            const viewportRight = window.innerWidth - 20 - parseInt(textBox.style.width, 10); // Adjust this value as needed
+            const viewportTop = 70; // Adjust this value as needed
+
+            textBox.style.top = (viewportTop + window.scrollY) + "px";
+            textBox.style.left = viewportRight + "px";
+
+            textBox.classList.add("show");
+
+            activeTextbox_rt = textBox;
+
+            textBoxFlags_rt[elementId] = true;
+        }
+
+
+        function hideActiveTextBoxRight() {
+            if (activeTextbox_rt) {
+                activeTextbox_rt.remove();
+                activeTextbox_rt = null;
+            }
+        }
+
+
+        // Import Subjects JSON data
+        document.addEventListener("DOMContentLoaded", () => {
+            const div_id5_2_1 = document.querySelector(".div_id5_2_1");
+            const div_id5_2_2 = document.querySelector(".div_id5_2_2");
+            const div_id5_2_3 = document.querySelector(".div_id5_2_3");
+            const div_id5_2_4 = document.querySelector(".div_id5_2_4");
+            const div_id5_2_5 = document.querySelector(".div_id5_2_5");
+
+            let sportValue;
+            fetch('subjects.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    get(subjectRef).then((snapshot) => {
+                        sportValue = snapshot.val(); // Define sportValue here
+                        // Rest of your code for event listeners
+                        // div_id2_2_2.addEventListener("mouseenter", () => {
+                        //     if (sportValue) {
+                        //         const contentKey = sportValue; // Update this with your actual content key
+                        //         const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                        //         showTextBox("2.2", content);
+                        //     } else {
+                        //         console.error("Sport value is not available.");
+                        //     }
+                        // });
+                        console.log(sportValue);
+
+                        let div_id5_2_1_Content = "";
+                        if (sportValue === "English") {
+                            const pElement = div_id5_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_1_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Math") {
+                            const pElement = div_id5_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_1_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Science") {
+                            const pElement = div_id5_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_1_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Social Studies") {
+                            const pElement = div_id5_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_1_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Foreign Language") {
+                            const pElement = div_id5_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_1_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Home Economics") {
+                            const pElement = div_id5_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_1_Content = jsonData[5][communicationKey];
+                        }
+
+                        // Rest of your code for event listeners
+                        div_id5_2_1.addEventListener("mouseenter", () => {
+                            if (div_id5_2_1_Content) {
+                                showRightTextBox("5.1", div_id5_2_1_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id5_2_1.addEventListener("click", () => {
+                            hideActiveTextBox("5.1");
+                        });
+
+
+                        let div_id5_2_2_Content = "";
+                        if (sportValue === "English") {
+                            const pElement = div_id5_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_2_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Math") {
+                            const pElement = div_id5_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_2_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Science") {
+                            const pElement = div_id5_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_2_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Social Studies") {
+                            const pElement = div_id5_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_2_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Foreign Language") {
+                            const pElement = div_id5_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_2_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Home Economics") {
+                            const pElement = div_id5_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_2_Content = jsonData[5][communicationKey];
+                        }
+
+                        // Rest of your code for event listeners
+                        div_id5_2_2.addEventListener("mouseenter", () => {
+                            if (div_id5_2_2_Content) {
+                                showRightTextBox("5.2", div_id5_2_2_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id5_2_2.addEventListener("click", () => {
+                            hideActiveTextBox("5.2");
+                        });
+
+
+
+                        let div_id5_2_3_Content = "";
+                        if (sportValue === "English") {
+                            const pElement = div_id5_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_3_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Math") {
+                            const pElement = div_id5_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_3_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Science") {
+                            const pElement = div_id5_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_3_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Social Studies") {
+                            const pElement = div_id5_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_3_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Foreign Language") {
+                            const pElement = div_id5_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_3_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Home Economics") {
+                            const pElement = div_id5_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_3_Content = jsonData[5][communicationKey];
+                        }
+
+
+                        div_id5_2_3.addEventListener("mouseenter", () => {
+                            // const contentKey = "Basketball"; // Update this with your actual content key
+                            // const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                            //showTextBox("2.3", content);
+                            if (div_id5_2_3_Content) {
+                                showRightTextBox("5.3", div_id5_2_3_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id5_2_3.addEventListener("click", () => {
+                            hideActiveTextBox("5.3");
+                        });
+
+
+                        let div_id5_2_4_Content = "";
+                        if (sportValue === "English") {
+                            const pElement = div_id5_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_4_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Math") {
+                            const pElement = div_id5_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_4_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Science") {
+                            const pElement = div_id5_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_4_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Social Studies") {
+                            const pElement = div_id5_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_4_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Foreign Language") {
+                            const pElement = div_id5_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_4_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Home Economics") {
+                            const pElement = div_id5_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_4_Content = jsonData[5][communicationKey];
+                        }
+
+
+                        div_id5_2_4.addEventListener("mouseenter", () => {
+                            // const contentKey = "Basketball"; // Update this with your actual content key
+                            // const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                            //showTextBox("2.3", content);
+                            if (div_id5_2_4_Content) {
+                                showRightTextBox("5.4", div_id5_2_4_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id5_2_4.addEventListener("click", () => {
+                            hideActiveTextBoxRight("5.4");
+                        });
+
+
+                        let div_id5_2_5_Content = "";
+                        if (sportValue === "English") {
+                            const pElement = div_id5_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_5_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Math") {
+                            const pElement = div_id5_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_5_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Science") {
+                            const pElement = div_id5_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_5_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Social Studies") {
+                            const pElement = div_id5_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_5_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Foreign Language") {
+                            const pElement = div_id5_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_5_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Home Economics") {
+                            const pElement = div_id5_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_5_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Art") {
+                            const pElement = div_id5_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id5_2_5_Content = jsonData[6][communicationKey];
+                        }
+
+
+                        div_id5_2_5.addEventListener("mouseenter", () => {
+                            // const contentKey = "Basketball"; // Update this with your actual content key
+                            // const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                            //showTextBox("2.3", content);
+                            if (div_id5_2_5_Content) {
+                                showRightTextBox("5.5", div_id5_2_5_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id5_2_5.addEventListener("click", () => {
+                            hideActiveTextBoxRight("5.5");
+                        });
+
+                        // Add similar event listeners for other anchor elements
+                    }).catch((error) => {
+                        console.error(error);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        });
+
+
+
+
+
+
+
+
+        // Import Positions JSON data
+        document.addEventListener("DOMContentLoaded", () => {
+            const div_id4_2_1 = document.querySelector(".div_id4_2_1");
+            const div_id4_2_2 = document.querySelector(".div_id4_2_2");
+            const div_id4_2_3 = document.querySelector(".div_id4_2_3");
+            const div_id4_2_4 = document.querySelector(".div_id4_2_4");
+            const div_id4_2_5 = document.querySelector(".div_id4_2_5");
+
+            let sportValue;
+            fetch('positions.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    get(positionRef).then((snapshot) => {
+                        sportValue = snapshot.val(); // Define sportValue here
+                        // Rest of your code for event listeners
+                        // div_id2_2_2.addEventListener("mouseenter", () => {
+                        //     if (sportValue) {
+                        //         const contentKey = sportValue; // Update this with your actual content key
+                        //         const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                        //         showTextBox("2.2", content);
+                        //     } else {
+                        //         console.error("Sport value is not available.");
+                        //     }
+                        // });
+                        console.log(sportValue);
+
+                        let div_id4_2_1_Content = "";
+                        if (sportValue === "Singles") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Forecourt") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Backcourt") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[2][communicationKey];
+                        }
+
+                        // Rest of your code for event listeners
+                        div_id4_2_1.addEventListener("mouseenter", () => {
+                            if (div_id4_2_1_Content) {
+                                showTextBox("4.1", div_id4_2_1_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id4_2_1.addEventListener("click", () => {
+                            hideActiveTextBox("4.1");
+                        });
+
+
+                        let div_id4_2_2_Content = "";
+                        if (sportValue === "Singles") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Forecourt") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Backcourt") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[2][communicationKey];
+                        }
+
+
+                        // Rest of your code for event listeners
+                        div_id4_2_2.addEventListener("mouseenter", () => {
+                            if (div_id4_2_2_Content) {
+                                showTextBox("4.2", div_id4_2_2_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id4_2_2.addEventListener("click", () => {
+                            hideActiveTextBox("4.2");
+                        });
+
+
+
+                        let div_id4_2_3_Content = "";
+                        if (sportValue === "Singles") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Forecourt") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Backcourt") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[2][communicationKey];
+                        }
+
+
+                        div_id4_2_3.addEventListener("mouseenter", () => {
+                            if (div_id4_2_3_Content) {
+                                showTextBox("4.3", div_id4_2_3_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id4_2_3.addEventListener("click", () => {
+                            hideActiveTextBox("4.3");
+                        });
+
+
+                        let div_id4_2_4_Content = "";
+                        if (sportValue === "Singles") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Forecourt") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Backcourt") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[2][communicationKey];
+                        }
+
+
+                        div_id4_2_4.addEventListener("mouseenter", () => {
+                            if (div_id4_2_4_Content) {
+                                showTextBox("4.4", div_id4_2_4_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id4_2_4.addEventListener("click", () => {
+                            hideActiveTextBoxRight("4.4");
+                        });
+
+
+                        let div_id4_2_5_Content = "";
+                        if (sportValue === "Singles") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Forecourt") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Doubles Backcourt") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[2][communicationKey];
+                        }
+
+
+                        div_id4_2_5.addEventListener("mouseenter", () => {
+                            if (div_id4_2_5_Content) {
+                                showTextBox("4.5", div_id4_2_5_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id4_2_5.addEventListener("click", () => {
+                            hideActiveTextBoxRight("4.5");
+                        });
+
+                        // Add similar event listeners for other anchor elements
+                    }).catch((error) => {
+                        console.error(error);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        });
+
+
+
+
+
+
+
+
+
+        // Import Hobbies JSON data
+        document.addEventListener("DOMContentLoaded", () => {
+            const div_id3_2_1 = document.querySelector(".div_id3_2_1");
+            const div_id3_2_2 = document.querySelector(".div_id3_2_2");
+            const div_id3_2_3 = document.querySelector(".div_id3_2_3");
+            const div_id3_2_4 = document.querySelector(".div_id3_2_4");
+            const div_id3_2_5 = document.querySelector(".div_id3_2_5");
+
+            let sportValue;
+            fetch('hobbies.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    get(hobbyRef).then((snapshot) => {
+                        sportValue = snapshot.val(); // Define sportValue here
+                        // Rest of your code for event listeners
+                        // div_id2_2_2.addEventListener("mouseenter", () => {
+                        //     if (sportValue) {
+                        //         const contentKey = sportValue; // Update this with your actual content key
+                        //         const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                        //         showTextBox("2.2", content);
+                        //     } else {
+                        //         console.error("Sport value is not available.");
+                        //     }
+                        // });
+                        console.log(sportValue);
+
+                        let div_id3_2_1_Content = "";
+                        if (sportValue === "Reading") {
+                            const pElement = div_id3_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_1_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Writing") {
+                            const pElement = div_id3_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_1_Content = jsonData[1][communicationKey];
+                        }
+
+                        // Rest of your code for event listeners
+                        div_id3_2_1.addEventListener("mouseenter", () => {
+                            if (div_id3_2_1_Content) {
+                                showTextBox("3.1", div_id3_2_1_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id3_2_1.addEventListener("click", () => {
+                            hideActiveTextBox("3.1");
+                        });
+
+
+                        let div_id3_2_2_Content = "";
+                        if (sportValue === "Reading") {
+                            const pElement = div_id3_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_2_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Writing") {
+                            const pElement = div_id3_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_2_Content = jsonData[1][communicationKey];
+                        }
+
+
+                        // Rest of your code for event listeners
+                        div_id3_2_2.addEventListener("mouseenter", () => {
+                            if (div_id3_2_2_Content) {
+                                showTextBox("3.2", div_id3_2_2_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id3_2_2.addEventListener("click", () => {
+                            hideActiveTextBox("3.2");
+                        });
+
+
+
+                        let div_id3_2_3_Content = "";
+                        if (sportValue === "Reading") {
+                            const pElement = div_id3_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_3_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Writing") {
+                            const pElement = div_id3_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_3_Content = jsonData[1][communicationKey];
+                        }
+
+
+                        div_id3_2_3.addEventListener("mouseenter", () => {
+                            // const contentKey = "Basketball"; // Update this with your actual content key
+                            // const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                            //showTextBox("2.3", content);
+                            if (div_id3_2_3_Content) {
+                                showTextBox("3.3", div_id3_2_3_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id3_2_3.addEventListener("click", () => {
+                            hideActiveTextBox("3.3");
+                        });
+
+
+                        let div_id3_2_4_Content = "";
+                        if (sportValue === "Reading") {
+                            const pElement = div_id3_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_4_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Writing") {
+                            const pElement = div_id3_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_4_Content = jsonData[1][communicationKey];
+                        }
+
+
+                        div_id3_2_4.addEventListener("mouseenter", () => {
+                            if (div_id3_2_4_Content) {
+                                showTextBox("3.4", div_id3_2_4_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id3_2_4.addEventListener("click", () => {
+                            hideActiveTextBoxRight("3.4");
+                        });
+
+
+                        let div_id3_2_5_Content = "";
+                        if (sportValue === "Reading") {
+                            const pElement = div_id3_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_5_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Writing") {
+                            const pElement = div_id3_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_5_Content = jsonData[1][communicationKey];
+                        }
+
+
+                        div_id3_2_5.addEventListener("mouseenter", () => {
+                            if (div_id3_2_5_Content) {
+                                showTextBox("3.5", div_id3_2_5_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id3_2_5.addEventListener("click", () => {
+                            hideActiveTextBoxRight("3.5");
+                        });
+
+                        // Add similar event listeners for other anchor elements
+                    }).catch((error) => {
+                        console.error(error);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Import Soft Skills for sports JSON data
+        document.addEventListener("DOMContentLoaded", () => {
+            const div_id2_2_1 = document.querySelector(".div_id2_2_1");
+            const div_id2_2_2 = document.querySelector(".div_id2_2_2");
+            const div_id2_2_3 = document.querySelector(".div_id2_2_3");
+            const div_id2_2_4 = document.querySelector(".div_id2_2_4");
+            const div_id2_2_5 = document.querySelector(".div_id2_2_5");
+
+            let sportValue;
+            fetch('sports.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    get(sportRef).then((snapshot) => {
+                        sportValue = snapshot.val(); // Define sportValue here
+                        // Rest of your code for event listeners
+                        // div_id2_2_2.addEventListener("mouseenter", () => {
+                        //     if (sportValue) {
+                        //         const contentKey = sportValue; // Update this with your actual content key
+                        //         const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                        //         showTextBox("2.2", content);
+                        //     } else {
+                        //         console.error("Sport value is not available.");
+                        //     }
+                        // });
+
+                        let div_id2_2_1_Content = "";
+                        if (sportValue === "Badminton") {
+                            const pElement = div_id2_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_1_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Baseball") {
+                            const pElement = div_id2_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_1_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Basketball") {
+                            const pElement = div_id2_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_1_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Bowling") {
+                            const pElement = div_id2_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_1_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Cheerleading") {
+                            const pElement = div_id2_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_1_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Cross Country") {
+                            const pElement = div_id2_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_1_Content = jsonData[5][communicationKey];
+                        }
+
+                        // Rest of your code for event listeners
+                        div_id2_2_1.addEventListener("mouseenter", () => {
+                            if (div_id2_2_1_Content) {
+                                showTextBox("2.1", div_id2_2_1_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id2_2_1.addEventListener("click", () => {
+                            hideActiveTextBox("2.1");
+                        });
+
+
+                        let div_id2_2_2_Content = "";
+                        if (sportValue === "Badminton") {
+                            const pElement = div_id2_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_2_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Baseball") {
+                            const pElement = div_id2_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_2_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Basketball") {
+                            const pElement = div_id2_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_2_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Bowling") {
+                            const pElement = div_id2_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_2_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Cheerleading") {
+                            const pElement = div_id2_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_2_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Cross Country") {
+                            const pElement = div_id2_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_2_Content = jsonData[5][communicationKey];
+                        }
+
+                        // Rest of your code for event listeners
+                        div_id2_2_2.addEventListener("mouseenter", () => {
+                            if (div_id2_2_2_Content) {
+                                showTextBox("2.2", div_id2_2_2_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id2_2_2.addEventListener("click", () => {
+                            hideActiveTextBox("2.2");
+                        });
+
+
+
+                        let div_id2_2_3_Content = "";
+                        if (sportValue === "Badminton") {
+                            const pElement = div_id2_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_3_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Baseball") {
+                            const pElement = div_id2_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_3_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Basketball") {
+                            const pElement = div_id2_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_3_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Bowling") {
+                            const pElement = div_id2_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_3_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Cheerleading") {
+                            const pElement = div_id2_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_3_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Cross Country") {
+                            const pElement = div_id2_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_3_Content = jsonData[5][communicationKey];
+                        }
+
+
+                        div_id2_2_3.addEventListener("mouseenter", () => {
+                            // const contentKey = "Basketball"; // Update this with your actual content key
+                            // const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                            //showTextBox("2.3", content);
+                            if (div_id2_2_3_Content) {
+                                showTextBox("2.3", div_id2_2_3_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id2_2_3.addEventListener("click", () => {
+                            hideActiveTextBox("2.3");
+                        });
+
+
+                        let div_id2_2_4_Content = "";
+                        if (sportValue === "Badminton") {
+                            const pElement = div_id2_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_4_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Baseball") {
+                            const pElement = div_id2_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_4_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Basketball") {
+                            const pElement = div_id2_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_4_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Bowling") {
+                            const pElement = div_id2_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_4_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Cheerleading") {
+                            const pElement = div_id2_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_4_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Cheerleading") {
+                            const pElement = div_id2_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_4_Content = jsonData[5][communicationKey];
+                        }
+
+
+                        div_id2_2_4.addEventListener("mouseenter", () => {
+                            // const contentKey = "Basketball"; // Update this with your actual content key
+                            // const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                            //showTextBox("2.3", content);
+                            if (div_id2_2_4_Content) {
+                                showRightTextBox("2.4", div_id2_2_4_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id2_2_4.addEventListener("click", () => {
+                            hideActiveTextBoxRight("2.4");
+                        });
+
+
+                        let div_id2_2_5_Content = "";
+                        if (sportValue === "Badminton") {
+                            const pElement = div_id2_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[0])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_5_Content = jsonData[0][communicationKey];
+                        }
+
+                        if (sportValue === "Baseball") {
+                            const pElement = div_id2_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[1])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_5_Content = jsonData[1][communicationKey];
+                        }
+
+                        if (sportValue === "Basketball") {
+                            const pElement = div_id2_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[2])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_5_Content = jsonData[2][communicationKey];
+                        }
+
+                        if (sportValue === "Bowling") {
+                            const pElement = div_id2_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_5_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Cheerleading") {
+                            const pElement = div_id2_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_5_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Cheerleading") {
+                            const pElement = div_id2_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_5_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Cross Country") {
+                            const pElement = div_id2_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_5_Content = jsonData[6][communicationKey];
+                        }
+
+
+                        div_id2_2_5.addEventListener("mouseenter", () => {
+                            // const contentKey = "Basketball"; // Update this with your actual content key
+                            // const content = jsonData.find(item => item.hasOwnProperty(contentKey))[contentKey];
+                            //showTextBox("2.3", content);
+                            if (div_id2_2_5_Content) {
+                                showRightTextBox("2.5", div_id2_2_5_Content);
+                            } else {
+                                console.error("Communication content not available for soccer.");
+                            }
+                        });
+
+                        div_id2_2_5.addEventListener("click", () => {
+                            hideActiveTextBoxRight("2.5");
+                        });
+
+                        // Add similar event listeners for other anchor elements
+                    }).catch((error) => {
+                        console.error(error);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const div_id2_2_3 = document.querySelector(".div_id2_2_3");
+        // div_id2_2_3.addEventListener("mouseenter", () => {
+        //     const content = "Communication is essential in badminton, whether it's calling out shots or communicating with your partner during doubles. Good communication skills can help you work better with others both on and off the court.";
+        //     showTextBox("2.3", content);
+        // });
+
+        // div_id2_2_3.addEventListener("click", () => {
+        //     hideActiveTextBox("2.3");
+        // });
+    </script>
+
+
+    <!-- sending email script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("lgWlo_GSbch7j6ibq");
+        })();
+    </script>
+</body>
+
+</html>

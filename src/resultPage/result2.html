@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700">
+        <link rel="stylesheet" href="./css/result2.css">
+        <title>New Result Page</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    </head>
+
+    <body>
+        <nav class="navmenu">
+            <ul>
+                <li>
+                    <a href="#" class="active">Tianlan Yang</a>
+                    <a href="#" class="Hobby">Power Forward</a>
+                    <a href="#" class="position">Sth Else</a>
+                    <a href="#" class="sport">Basketball</a>
+                    <a href="#" class="subject">Study</a>
+                    <a href="#" class="career">Career</a>
+                    <span class="line"></span>
+                    <span class="horiLineRight"></span>
+                    <span class="horiLineLeft"></span>
+                    <span class="line4"></span>
+                    <span class="line5"></span>
+                    <span class="line6"></span>
+                </li>
+
+                <!-- 橙色的小分支 -->
+                <li class="power-child">
+                    <a href="#" class="power1a">Power-Child1</a>
+                    <span class="main1Line"></span>
+                </li>
+                <li class="power-child2">
+                    <a href="#" class="power2a">Power-Child2</a>
+                    <span class="main2Line"></span>
+                </li>
+                <li class="power-child3">
+                    <a href="#" class="power3a">Power-Child3</a>
+                    <span class="main3Line"></span>
+                </li>
+
+                <!-- 绿色的小分支 -->
+                <li class="green-child">
+                    <a href="#" class="green1a">Green-Child1</a>
+                    <span class="green1Line"></span>
+                </li>
+                <li class="green-child2">
+                    <a href="#" class="green2a">Green-Child2</a>
+                    <span class="green2Line"></span>
+                </li>
+                <li class="green-child3">
+                    <a href="#" class="green3a">Green-Child3</a>
+                    <span class="green3Line"></span>
+                </li>
+                <li class="green-child4">
+                    <a href="#" class="green4a">Green-Child4</a>
+                    <span class="green4Line"></span>
+                </li>
+
+                <!-- 淡蓝色小分支 -->
+                <li class="skyblue-child">
+                    <a href="#" class="skyblue1a">Skyblue-Child1</a>
+                    <span class="skyblue1Line"></span>
+                </li>
+                <li class="skyblue-child2">
+                    <a href="#" class="skyblue2a">Skyblue-Child2</a>
+                    <span class="skyblue2Line"></span>
+                </li>
+                <li class="skyblue-child3">
+                    <a href="#" class="skyblue3a">Skyblue-Child3</a>
+                    <span class="skyblue3Line"></span>
+                </li>
+                <li class="skyblue-child4">
+                    <a href="#" class="skyblue4a">Skyblue-Child4</a>
+                    <span class="skyblue4Line"></span>
+                </li>
+
+                <!-- 紫色小分支 -->
+                <li class="purple-child">
+                    <a href="#" class="purple1a">Purple-Child1</a>
+                    <span class="purple1Line"></span>
+                </li>
+                <li class="purple-child2">
+                    <a href="#" class="purple2a">Purple-Child2</a>
+                    <span class="purple2Line"></span>
+                </li>
+                <li class="purple-child3">
+                    <a href="#" class="purple3a">Purple-Child3</a>
+                    <span class="purple3Line"></span>
+                </li>
+
+                <!-- 粉色小分支 -->
+                <li class="pink-child">
+                    <a href="#" class="pink1a">Pink-Child1</a>
+                    <span class="pink1Line"></span>
+                </li>
+                <li class="pink-child2">
+                    <a href="#" class="pink2a">Pink-Child2</a>
+                    <span class="pink2Line"></span>
+                </li>
+                <li class="pink-child3">
+                    <a href="#" class="pink3a">Pink-Child3</a>
+                    <span class="pink3Line"></span>
+                </li>
+                <li class="pink-child4">
+                    <a href="#" class="pink4a">Pink-Child4</a>
+                    <span class="pink4Line"></span>
+                </li>
+                <li class="pink-child5">
+                    <a href="#" class="pink5a">Pink-Child5</a>
+                    <span class="pink5Line"></span>
+                </li>
+            </ul>
+        </nav>
+        <canvas id="myCanvas"></canvas>
+        <script src="./script/result2.js"></script>
+
+        <!-- firebase -->
+        <script type="module">
+        //console.log("script");
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+
+        import { getDatabase, get, set, update, remove, ref, child, onValue }
+            from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+
+
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            onAuthStateChanged,
+            signOut
+        }
+            from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCkahzJE1QQxekDHPVHp4jM2CGS9MJuHyQ",
+            authDomain: "stsa-compass.firebaseapp.com",
+            projectId: "stsa-compass",
+            storageBucket: "stsa-compass.appspot.com",
+            messagingSenderId: "952259702189",
+            appId: "1:952259702189:web:0c4104d466caf2e7974524"
+        };
+
+
+
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const auth = getAuth(app);
+
+        const studentName = document.querySelector(".active");
+        const sport = document.querySelector(".sport");
+        const Hobby = document.querySelector(".Hobby");
+        const position = document.querySelector(".position");
+        //const Hobby2 = document.querySelector(".Hobby2");
+        const subject = document.querySelector(".subject");
+        const career = document.querySelector(".career");
+
+        //const userFulldataRef = ref(db);
+        const fullNameValue = localStorage.getItem('fullName');
+        console.log("jjjjjjj" + fullNameValue)
+
+
+        const userListRef = ref(db, 'UserList/' + fullNameValue + '/Answers');
+        const sportRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Sport');
+        const hobbyRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Hobby');
+        const subjectRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Subject');
+        const careertRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Desired_Career');
+        const positionRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Position_In_Sport');
+        const support_person1_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person1_email');
+        const support_person2_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person2_email');
+        //const hobby2Ref = ref(db, 'UserList/' + fullNameValue + '/Answers/Second_Favorite_Hobby');
+
+
+
+
+        get(sportRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const sportValue = snapshot.val();
+                sport.textContent = sportValue;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+
+        get(userListRef).then((snapshot) => {
+            if (snapshot.exists()) {
+
+                //console.log("hhhhhhhh"+fullNameValue);
+                //console.log("hhhhhhhh"+ userListRef);
+
+                var data1 = snapshot.val();
+                console.log(data1);
+
+                // const dataName = data1.Name;
+                studentName.textContent = fullNameValue;
+
+
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+        get(hobbyRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const hobbyVal = snapshot.val();
+                Hobby.textContent = hobbyVal;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+        // get(hobby2Ref).then((snapshot) => {
+        //     if (snapshot.exists()) {
+        //         const hobby2Val = snapshot.val();
+        //         Hobby2.textContent = hobby2Val;
+
+        //         //console.log("88888" + sportValue); // This will print the value of Sport
+        //         // Here you can use sportValue as per your requirement
+        //     }
+        //     else {
+        //         console.log("No data available");
+        //     }
+        // }).catch((error) => {
+        //     console.error(error);
+        // });
+
+        get(positionRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const positionVal = snapshot.val();
+                position.textContent = positionVal;
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+        get(subjectRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const subjectVal = snapshot.val();
+                subject.textContent = subjectVal;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+        get(careertRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const careerVal = snapshot.val();
+                career.textContent = careerVal;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+
+
+
+
+
+        async function getBase64ImageFromLocalPath(path) {
+            const response = await fetch(path);
+            const blob = await response.blob();
+
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onloadend = function () {
+                    resolve(reader.result);
+                }
+                reader.onerror = reject;
+                reader.readAsDataURL(blob);
+            });
+        }
+
+
+
+
+
+        //fetch the whole data as pdf and for email function
+        //pdf functionnalitty
+        const generatePDF = async (base64Image) => {
+
+            const dataRef2 = ref(db, 'UserList/' + fullNameValue + '/Answers');
+
+            const snapshot2 = await get(dataRef2);
+
+
+            const data2 = snapshot2.val();
+
+
+
+            let content = `Here is a profile summary for ${fullNameValue}.\nYou can use this information to help your student in their educational journey and career aspirations.\n\n`;
+
+
+            const fields = [
+                'Full_Name', 'Aware_Major', 'Taken_Courses', 'Good_Gpa',
+                'Desired_Career', 'Dream_Company', 'Pursue_Ppl', 'Favorite_Sport',
+                'Position_In_Sport', 'Favorite_Subject', 'Favorite_Hobby'
+            ];
+
+            for (const field of fields) {
+                if (data2[field]) {
+                    content += `${field}: ${data2[field]}\n`;
+                }
+            }
+
+            content += `\n\n${fullNameValue} was asked to write 3 goals for a 3 month time period.\nHere you can help keep your student accountable to these goals.\n\n`;
+
+            // 如果有目标字段，则添加它们
+            content += `Goals1: ${data2['Goals1'] || ' '}\n`;
+            content += `Goals2: ${data2['Goals2'] || ' '}\n`;
+            content += `Goals3: ${data2['Goals3'] || ' '}\n`;
+
+            content += `\nAlong with the email you will see a Skills Map for ${fullNameValue}.\nThe skills map is a snapshot of your students’ personal skills and strengths.\nThis is a tool that can be used identify a major, career field or you can use this to build their professional\nprofile/resume. \n\n`;
+
+            const doc = new jsPDF({
+                orientation: 'portrait',
+                unit: 'mm',
+                format: 'a4'
+            });
+
+
+            //add logo
+            const imgWidth = 50; // Set as desired
+            const imgHeight = 50; // Set as desired
+            const xPosition = (doc.internal.pageSize.getWidth() - imgWidth) / 2;
+            const yPosition = 10; // Top margin
+
+            doc.addImage(base64Image, 'JPEG', xPosition, yPosition, imgWidth, imgHeight);
+
+
+
+
+            doc.setFont('helvetica');
+            doc.setFontSize(12);
+
+            doc.text(content, 10, 30 + imgHeight);
+
+            doc.setLineHeightFactor(2.0);
+
+            return {
+                doc: doc,
+                dataUri: doc.output('datauristring')
+            }
+
+
+            //return doc.output('datauristring');
+
+            //doc.save('Information.pdf');
+        }
+        //  generatePDF();
+
+
+
+        async function generatePDFAndScreenshot() {
+
+            const base64Image = await getBase64ImageFromLocalPath('logo.jpeg');
+            // Generate the PDF
+            const { doc, dataUri } = await generatePDF(base64Image);
+
+            // Generate the screenshot
+            let screenshotBase64;
+            await html2canvas(document.body).then(canvas => {
+                screenshotBase64 = canvas.toDataURL(); // Split to remove the "data:image/png;base64," part
+            });
+
+
+            //doc.addImage(screenshotBase64, 'PNG', 20, 20, 100, 100);
+
+            return {
+                pdf: doc.output('datauristring'),
+                screenshot: screenshotBase64
+            };
+        }
+
+        async function sendPDFAndScreenshotAsAttachments() {
+                try {
+                    const attachments = await generatePDFAndScreenshot();
+
+                    // Fetch ccEmail and bccEmail from database
+                    const [ccSnapshot, bccSnapshot] = await Promise.all([
+                        get(support_person1_emailRef),
+                        get(support_person2_emailRef)
+                    ]);
+
+                    let ccEmail = ccSnapshot.exists() ? ccSnapshot.val() : "";
+                    let bccEmail = bccSnapshot.exists() ? bccSnapshot.val() : "";
+
+                    var emailParams = {
+                        pdf_content: attachments.pdf,
+                        screenshot_content: attachments.screenshot
+                    };
+
+                    // Only add to emailParams if the email is valid
+                    if (isValidEmail(ccEmail)) {
+                        emailParams.custom_cc = ccEmail;
+                    }
+
+                    if (isValidEmail(bccEmail)) {
+                        emailParams.custom_bcc = bccEmail;
+                    }
+
+                    try {
+                        await emailjs.send('service_t7kccom', 'template_8rl0sz7', emailParams);
+                        console.log('Email sent with PDF and Screenshot!');
+                    } catch (error) {
+                        console.log('Error sending attachments:', error);
+                    }
+
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+
+            function isValidEmail(email) {
+                var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                return regex.test(email);
+            }
+
+            // document.addEventListener('DOMContentLoaded', function () {
+            //     sendPDFAndScreenshotAsAttachments();
+            // });
+
+
+
+
+       
+
+    </script>
+
+        <!-- sending email script -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function () {
+            emailjs.init("lgWlo_GSbch7j6ibq");
+        })();
+    </script>
+    </body>
+
+</html>
