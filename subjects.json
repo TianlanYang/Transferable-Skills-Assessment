@@ -6,5 +6,13 @@
         "Cultural Awareness": "Studying English literature exposes you to different cultures, historical periods, and societal contexts, fostering cultural awareness and empathy.",
         "Persuasion and Rhetoric": "Developing your ability to construct persuasive arguments and use rhetorical techniques allows you to communicate more effectively and influence others in discussions and writing.",
         "Comment": "This is the Comment for English Subject"
+    },
+    {
+        "Problem-Solving": "Math involves solving complex problems by breaking them down into manageable steps and applying logical reasoning to find solutions.",
+        "Critical Thinking": "Engaging with mathematical concepts hones critical thinking skills as you evaluate assumptions, analyze patterns, and make informed decisions.",
+        "Abstract Reasoning": "Math often deals with abstract concepts and symbols, training your mind to think abstractly and grasp complex ideas.",
+        "Precision and Attention to Detail": "Mathematical tasks require accuracy and attention to detail, helping you develop skills in precision and meticulousness.",
+        "Logical Deduction": "Learning to follow logical sequences and proofs in math enhances your ability to think deductively and make sound conclusions.",
+        "Comment": "This is the Comment for Math Subject"
     }
 ]
