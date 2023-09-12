@@ -35,7 +35,8 @@
 			<div class='question'>
 				Your Full Name(*):<br>
 
-				<input type='text' id='fullName' name='fullName' placeholder='Full Name' required>
+				<input type='text' id='fullName' name='fullName' placeholder='Full Name' class="text-capitalize"
+					require>
 				<label for='FullName'></label>
 			</div>
 
@@ -74,7 +75,7 @@
 
 			</select><br>
 
-			
+
 
 			<div class='question'>
 				<br>
@@ -101,15 +102,6 @@
 					<option value="Gardening">Gardening</option>
 					<option value="Film-making">Film-making</option>
 					<option value="Cycling">Cycling</option>
-
-				</select><br>
-			</div>
-
-
-			<div class='question'>
-				<label for='subject'>What else do you enjoy doing, name one more hobby you enjoy doing.(*)<br></label>
-				<select id="hobby2" required>
-					<option value="" disabled selected hidden>Select an option</option>
 					<option value="Hiking">Hiking</option>
 					<option value="Volunteering">Volunteering</option>
 					<option value="Fashion Design">Fashion Design</option>
@@ -123,7 +115,42 @@
 					<option value="Singer/Rapper">Singer/Rapper</option>
 					<option value="Fitness Training">Fitness Training</option>
 					<option value="Acting">Acting</option>
+					<option value="N/A">I don't have one.</option>
+				</select><br>
+			</div>
 
+
+			<div class='question'>
+				<label for='subject'>What else do you enjoy doing, name one more hobby you enjoy doing.(*)<br></label>
+				<select id="hobby2" required>
+					<option value="" disabled selected hidden>Select an option</option>
+					<option value="Reading">Reading</option>
+					<option value="Writing">Writing</option>
+					<option value="Drawing/Painting">Drawing/Painting</option>
+					<option value="Playing a musical instrument">Playing a musical instrument</option>
+					<option value="Photography">Photography</option>
+					<option value="Cooking/Baking">Cooking/Baking</option>
+					<option value="Dancing">Dancing</option>
+					<option value="Gaming">Gaming</option>
+					<option value="Coding/Programming">Coding/Programming</option>
+					<option value="DIY">DIY</option>
+					<option value="Gardening">Gardening</option>
+					<option value="Film-making">Film-making</option>
+					<option value="Cycling">Cycling</option>
+					<option value="Hiking">Hiking</option>
+					<option value="Volunteering">Volunteering</option>
+					<option value="Fashion Design">Fashion Design</option>
+					<option value="Robotics">Robotics</option>
+					<option value="Magic Tricks">Magic Tricks</option>
+					<option value="Board Games">Board Games</option>
+					<option value="Collecting">Collecting</option>
+					<option value="Skateboarding">Skateboarding</option>
+					<option value="Comedian">Comedian</option>
+					<option value="Music Production">Music Production</option>
+					<option value="Singer/Rapper">Singer/Rapper</option>
+					<option value="Fitness Training">Fitness Training</option>
+					<option value="Acting">Acting</option>
+					<option value="N/A">I don't have one.</option>
 				</select><br>
 
 			</div>
@@ -145,14 +172,13 @@
 					<option value="Business/Entreprenuership">Business/Entreprenuership</option>
 					<option value="Pshychology">Pshychology</option>
 					<option value="Specialty">Specialty</option>
-
 				</select><br>
 			</div>
 
 			<div class='question'>
 				<label for='career'>What is your desired career(Check the recommended careers page for
 					ideas)(*)<br></label>
-				<input type='text' id='career' name='career' placeholder='Career' required>
+				<input type='text' id='career' name='career' placeholder='Career' class="text-capitalize" required>
 			</div>
 
 
@@ -205,13 +231,18 @@
 			</div>
 
 			<div class='question''>
-					<label for=' company'>Do you have a company you want to work for?(*)<br></label>
+				<label for=' company'>Do you have a company you want to work for?(*)<br></label>
 				<label for='option1'>Yes</label>
 				<input type='radio' id='company_option1' name='company_option' value='Yes'>
 				<label for='option2'>No</label>
 				<input type='radio' id='company_option2' name='company_option' value='No'>
 			</div>
 
+			<div class='question'>If yes, what is the name of the company?
+				<label for='career'><br></label>
+				<input type='text' id='career_company' name='career_company' placeholder='Career'
+					class="text-capitalize">
+			</div>
 
 			<!-- <div class='question'>
 				<label for='strengths'>If you habe taken the Gallup Strengths
@@ -226,19 +257,21 @@
 			<div class='question'>
 				<label for='goals'>Write 3 golas or tasks you will do in the next 3 months.
 					They can be eduactional, professional or career goals.<br></label>
-				<input type='text' id='goals1' name='goals1' placeholder='Goal 1'><br>
-				<input type='text' id='goals2' name='goals2' placeholder='Goal 2'><br>
-				<input type='text' id='goals3' name='goals3' placeholder='Goal 3'><br>
+				<input type='text' id='goals1' name='goals1' placeholder='Goal 1' class="text-capitalize"><br>
+				<input type='text' id='goals2' name='goals2' placeholder='Goal 2' class="text-capitalize"><br>
+				<input type='text' id='goals3' name='goals3' placeholder='Goal 3' class="text-capitalize"><br>
 
 			</div>
 
 			<div class='question'>
 				<label for='support-person'>Identify a support person who can keep you
 					accountable to your goals.<br></label>
-				<input type='text' id='support_person1' name='support_person1' placeholder='Person 1'><br>
+				<input type='text' id='support_person1' name='support_person1' placeholder='Person 1'
+					class="text-capitalize"><br>
 				<input type="email" id="support_person1_email" placeholder="Person1's Email"><br>
 
-				<input type='text' id='support_person2' name='support_person2' placeholder='Person 2'><br>
+				<input type='text' id='support_person2' name='support_person2' placeholder='Person 2'
+					class="text-capitalize"><br>
 				<input type="email" id="support_person2_email" placeholder="Person2's Email"><br>
 			</div>
 			<p><b>Check your answers and click the submit button below.</b></p>
@@ -401,7 +434,7 @@
 					alert('data stored sucessfully!')
 					const fullNameValue = document.getElementById('fullName').value;
 					localStorage.setItem('fullName', fullNameValue);
-					console.log('hhhhhhhh'+ support_person1_email.value);
+					console.log('hhhhhhhh' + support_person1_email.value);
 					window.location.href = './result.html';
 				})
 				.catch((error) => {
@@ -418,9 +451,9 @@
 	</script>
 
 
-<script src="./js/dropDownPosition.js"></script>
+	<script src="./js/dropDownPosition.js"></script>
 
-<script src="./js/firstLetterCaptial.js"></script>
+	<script src="./js/firstLetterCaptial.js"></script>
 
 </body>
 
