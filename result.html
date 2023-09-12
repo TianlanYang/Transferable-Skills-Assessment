@@ -88,6 +88,7 @@
                 </div>
                 <div class="flex-1 text-center">
                     <p class="text-gray-300 text-5xl font-semibold" style="font-size: x-large; margin-right: 16%;">My Skills Map</p>
+                    <p class="text-gray-300 text-sm" style="margin-right: 16%;">Instructions: Click each node for an explanation. If the node is not clickable you can ask the AI chat</p>
                 </div>
             </div>
         </div>
@@ -1596,6 +1597,53 @@
                             div_id4_2_1_Content = jsonData[2][communicationKey];
                         }
 
+                        //*******************
+                        //positions for Basketball
+                        if (sportValue === "Point Guard") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Shooting Guard") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Small Forward") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Power Forward") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[6][communicationKey];
+                        }
+
+                        if (sportValue === "Center") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[7])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[7][communicationKey];
+                        }
+
                         // Rest of your code for event listeners
                         div_id4_2_1.addEventListener("mouseenter", () => {
                             if (div_id4_2_1_Content) {
@@ -1636,6 +1684,53 @@
                                 pElement.textContent = communicationKey;
                             }
                             div_id4_2_2_Content = jsonData[2][communicationKey];
+                        }
+
+                         //*******************
+                        //positions for Basketball
+                        if (sportValue === "Point Guard") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Shooting Guard") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Small Forward") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Power Forward") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[6][communicationKey];
+                        }
+
+                        if (sportValue === "Center") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[7])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[7][communicationKey];
                         }
 
 
@@ -1682,6 +1777,54 @@
                             div_id4_2_3_Content = jsonData[2][communicationKey];
                         }
 
+                        //*******************
+                        //positions for Basketball
+                        if (sportValue === "Point Guard") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Shooting Guard") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Small Forward") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Power Forward") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[6][communicationKey];
+                        }
+
+                        if (sportValue === "Center") {
+                            const pElement = div_id4_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[7])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_3_Content = jsonData[7][communicationKey];
+                        }
+
+
 
                         div_id4_2_3.addEventListener("mouseenter", () => {
                             if (div_id4_2_3_Content) {
@@ -1724,6 +1867,54 @@
                             div_id4_2_4_Content = jsonData[2][communicationKey];
                         }
 
+                        //*******************
+                        //positions for Basketball
+                        if (sportValue === "Point Guard") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Shooting Guard") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Small Forward") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Power Forward") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[6][communicationKey];
+                        }
+
+                        if (sportValue === "Center") {
+                            const pElement = div_id4_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[7])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_4_Content = jsonData[7][communicationKey];
+                        }
+
+
 
                         div_id4_2_4.addEventListener("mouseenter", () => {
                             if (div_id4_2_4_Content) {
@@ -1765,6 +1956,54 @@
                             }
                             div_id4_2_5_Content = jsonData[2][communicationKey];
                         }
+
+                        //*******************
+                        //positions for Basketball
+                        if (sportValue === "Point Guard") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[3])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[3][communicationKey];
+                        }
+
+                        if (sportValue === "Shooting Guard") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[4])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[4][communicationKey];
+                        }
+
+                        if (sportValue === "Small Forward") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[5])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Power Forward") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[6][communicationKey];
+                        }
+
+                        if (sportValue === "Center") {
+                            const pElement = div_id4_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[7])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_5_Content = jsonData[7][communicationKey];
+                        }
+
 
 
                         div_id4_2_5.addEventListener("mouseenter", () => {
