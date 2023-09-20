@@ -86,7 +86,7 @@
 			</div>
 
 			<div class='question'>
-				<label for='hobby'>what is your favorite hobby?(*)<br></label>
+				<label for='hobby'>What is your favorite hobby?(*)<br></label>
 				<select id="hobby" required>
 					<option value="" disabled selected hidden>Select an option</option>
 					<option value="Reading">Reading</option>
@@ -272,7 +272,9 @@
 
 				<input type='text' id='support_person2' name='support_person2' placeholder='Person 2'
 					class="text-capitalize"><br>
-				<input type="email" id="support_person2_email" placeholder="Person2's Email"><br>
+				<input type="email" id="support_person2_email" placeholder="Person2's Email"><br><br>
+				<label for='student_email'>Enter your email to receive a copy of your answers.<br></label>
+				<input type='text' id='student_email' name='student_email' placeholder='Your Email'><br>
 			</div>
 			<p><b>Check your answers and click the submit button below.</b></p>
 
@@ -362,6 +364,7 @@
 		var support_person2 = document.getElementById('support_person2');
 		var support_person1_email = document.getElementById('support_person1_email');
 		var support_person2_email = document.getElementById('support_person2_email');
+		var student_email = document.getElementById('student_email');
 
 
 		var submitBtn = document.getElementById('submit');
@@ -427,7 +430,8 @@
 				Support_person1: support_person1.value,
 				Support_person2: support_person2.value,
 				Support_person1_email: support_person1_email.value,
-				Support_person2_email: support_person2_email.value
+				Support_person2_email: support_person2_email.value,
+				Student_email:student_email.value
 
 			})
 				.then(() => {

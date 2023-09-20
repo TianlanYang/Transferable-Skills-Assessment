@@ -411,6 +411,7 @@
         const positionRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Position_In_Sport');
         const support_person1_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person1_email');
         const support_person2_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person2_email');
+        const student_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Student_email');
         //const hobby2Ref = ref(db, 'UserList/' + fullNameValue + '/Answers/Second_Favorite_Hobby');
 
 
@@ -435,8 +436,7 @@
         get(userListRef).then((snapshot) => {
             if (snapshot.exists()) {
 
-                //console.log("hhhhhhhh"+fullNameValue);
-                //console.log("hhhhhhhh"+ userListRef);
+            
 
                 var data1 = snapshot.val();
                 console.log(data1);
@@ -468,20 +468,7 @@
             console.error(error);
         });
 
-        // get(hobby2Ref).then((snapshot) => {
-        //     if (snapshot.exists()) {
-        //         const hobby2Val = snapshot.val();
-        //         Hobby2.textContent = hobby2Val;
-
-        //         //console.log("88888" + sportValue); // This will print the value of Sport
-        //         // Here you can use sportValue as per your requirement
-        //     }
-        //     else {
-        //         console.log("No data available");
-        //     }
-        // }).catch((error) => {
-        //     console.error(error);
-        // });
+       
 
         get(positionRef).then((snapshot) => {
             if (snapshot.exists()) {
@@ -648,13 +635,15 @@
                 const attachments = await generatePDFAndScreenshot();
 
                 // Fetch ccEmail and bccEmail from database
-                const [ccSnapshot, bccSnapshot] = await Promise.all([
+                const [ccSnapshot, bccSnapshot,cc2Snapshot] = await Promise.all([
                     get(support_person1_emailRef),
-                    get(support_person2_emailRef)
+                    get(support_person2_emailRef),
+                    get(student_emailRef)
                 ]);
 
                 let ccEmail = ccSnapshot.exists() ? ccSnapshot.val() : "";
                 let bccEmail = bccSnapshot.exists() ? bccSnapshot.val() : "";
+                let cc2Email = cc2Snapshot.exists() ? cc2Snapshot.val() : "";
 
                 var emailParams = {
                     pdf_content: attachments.pdf,
@@ -668,6 +657,9 @@
 
                 if (isValidEmail(bccEmail)) {
                     emailParams.custom_bcc = bccEmail;
+                }
+                if (isValidEmail(cc2Email)) {
+                    emailParams.custom_cc2 = cc2Email;
                 }
 
                 try {
