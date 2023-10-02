@@ -14,5 +14,85 @@
         "Precision and Attention to Detail": "Mathematical tasks require accuracy and attention to detail, helping you develop skills in precision and meticulousness.",
         "Logical Deduction": "Learning to follow logical sequences and proofs in math enhances your ability to think deductively and make sound conclusions.",
         "Comment": "This is the Comment for Math Subject"
+    },
+    {
+        "Critical Thinking and Inquiry": "Science encourages you to question, investigate, and analyze information critically, fostering a curious and skeptical mindset.",
+        "Observation and Data Collection": "Science emphasizes careful observation and accurate data collection, honing your ability to notice details and record information systematically.",
+        "Hypothesis Testing and Experimentation": "Developing and testing hypotheses through experiments helps you understand cause-and-effect relationships and learn the scientific method.",
+        "Problem-Solving": "Science involves solving complex problems by breaking them down into smaller components and applying logical reasoning to find solutions.",
+        "Communication and Presentation": "Sharing scientific findings with others requires clear communication, presentation skills, and the ability to explain complex concepts in understandable ways.",
+        "Comment": "This is the Comment for Science Subject"
+    },
+    {
+        "Research and Data Analysis": "Social sciences teach you how to gather, analyze, and interpret data from various sources to understand societal trends and patterns.",
+        "Critical Thinking and Analysis": "Engaging with social theories and concepts nurtures critical thinking skills as you evaluate assumptions, analyze perspectives, and draw informed conclusions.",
+        "Empathy and Cultural Awareness": "Studying social sciences encourages understanding different cultures, perspectives, and social contexts, fostering empathy and cultural sensitivity.",
+        "Communication and Writing": "Articulating complex ideas and research findings effectively in writing is a key skill in social sciences, helping you convey your insights to others.",
+        "Problem-Solving and Policy Implications": "Social sciences involve identifying and addressing societal challenges, leading to problem-solving skills and the ability to propose policy recommendations",
+        "Comment": "This is the Comment for Social Studies Subject"
+    },
+    {
+        "Communication Skills": "Learning a new language enhances your ability to communicate effectively with speakers of that language, both in writing and speaking.",
+        "Cultural Awareness": "Studying a foreign language often involves exploring the culture, customs, and traditions associated with that language, fostering cultural awareness and sensitivity.",
+        "Cognitive Flexibility": "Learning a new language challenges your brain to think in different ways and adapt to new grammatical structures and vocabulary.",
+        "Problem-Solving": "Navigating the complexities of a foreign language requires problem-solving skills as you decipher meanings, interpret nuances, and find ways to express yourself.",
+        "Empathy and Perspective-Taking": "Learning a foreign language helps you understand different worldviews and perspectives, fostering empathy and the ability to connect with people from diverse backgrounds.",
+        "Comment": "This is the Comment for Foreign Language Subject"
+    },
+    {
+        "Cooking and Nutrition": "Home economics often includes cooking and learning about balanced nutrition, helping you prepare wholesome meals and make healthier dietary choices.",
+        "Budgeting and Financial Literacy": "Learning to manage household expenses, create budgets, and make informed financial decisions is a key aspect of home economics.",
+        "Sewing and Textile Skills": "Home economics may involve learning basic sewing, mending, and textile care skills, allowing you to repair clothing and perform basic alterations.",
+        "Time Management and Organization": "Home economics teaches time management skills to balance daily responsibilities and household tasks effectively.",
+        "Interpersonal and Communication Skills": "Learning to work collaboratively on projects, express needs and preferences, and communicate effectively within a family or household context is emphasized.",
+        "Comment": "This is the Comment for Home Economics Subject"
+    },
+    {
+        "Creativity and Imagination": "Art encourages you to explore new ideas, experiment with materials, and think outside the box, fostering creativity and imaginative thinking.",
+        "Visual Communication": "Creating art involves conveying emotions, messages, and ideas visually, enhancing your ability to communicate through images and symbols.",
+        "Attention to Detail": "Art requires paying close attention to details like color, texture, and composition, helping you develop precision and meticulousness.",
+        "Problem-Solving and Critical Thinking": "Art often involves solving visual problems, making artistic decisions, and analyzing the best ways to achieve your desired outcome.",
+        "Fine Motor Skills": "Engaging in art hones fine motor skills as you manipulate brushes, pencils, and other tools, enhancing your hand-eye coordination and control.",
+        "Comment": "This is the Comment for Art Subject"
+    },
+    {
+        "Auditory Discrimination and Sensitivity": "Studying music hones your ability to discern different tones, pitches, and nuances in sound, enhancing your auditory sensitivity.",
+        "Rhythm and Timing": "Playing music requires a strong sense of rhythm and timing, fostering an innate understanding of musical structure and tempo.",
+        "Memory and Concentration": "Learning musical pieces develops memory skills as you memorize melodies, chords, and lyrics, and concentration as you maintain focus during performances.",
+        "Teamwork and Collaboration": "Participating in musical ensembles teaches teamwork and collaboration, as you coordinate with fellow musicians to create a harmonious performance.",
+        "Emotional Expression and Empathy":"Music allows you to convey emotions and connect with others on a profound level, fostering emotional expression and empathy through your performances.",
+        "Comment": "This is the Comment for Music Subject"
+    },
+    {
+        "Programming and Coding": "Computer science teaches programming languages and coding techniques, enabling you to develop software, applications, and algorithms.",
+        "Problem-Solving and Logical Thinking": "Computer science involves breaking down complex problems into smaller components and devising logical solutions, honing your analytical and critical thinking skills.",
+        "Algorithm Design and Optimization": "Learning algorithms helps you design efficient solutions for various tasks and optimize processes for better performance.",
+        "Data Analysis and Interpretation": "Computer science includes data handling skills, such as analyzing and interpreting large datasets to extract valuable insights.",
+        "Collaboration and Communication": "Developing software often involves working in teams, fostering collaboration, effective communication, and the ability to work on shared projects.",
+        "Comment": "This is the Comment for Computer Science Subject"
+    },
+    {
+        "Health Literacy": "Health education teaches you how to access, understand, and apply health information, enabling you to make informed decisions about your well-being.",
+        "Critical Evaluation": "Learning to critically evaluate health information and claims helps you differentiate between evidence-based advice and misinformation.",
+        "Communication Skills": "Health education emphasizes effective communication skills, enabling you to discuss health topics, share information, and advocate for your health needs.",
+        "Personal Wellness Management": "Health education equips you with knowledge to manage your physical, mental, and emotional well-being through healthy habits and lifestyle choices.",
+        "Advocacy and Empowerment": "Understanding health education empowers you to advocate for health policies, make informed healthcare choices, and promote well-being in your community.",
+        "Comment": "This is the Comment for Health Education Subject"
+    },
+    {
+        "Strategic Planning and Decision-Making": "Business and entrepreneurship require creating business plans, setting goals, and making informed decisions to drive your venture's success.",
+        "Communication and Networking": "Developing strong communication skills enables you to interact effectively with clients, partners, and stakeholders, and building a network enhances your business opportunities.",
+        "Problem-Solving and Adaptability": "Business environments are dynamic and may present challenges. Developing problem-solving skills and the ability to adapt to changing circumstances is essential.",
+        "Financial Literacy and Management": "Learning about budgeting, financial forecasting, and managing resources helps you make sound financial decisions and sustain your business.",
+        "Leadership and Team Management": "As an entrepreneur, you may need to lead a team. Developing leadership skills helps you inspire, motivate, and manage your team effectively.",
+        "Comment": "This is the Comment for Business/Entreprenuership Subject"
+    },
+    {
+        "Empathy and Active Listening": "Psychology teaches you to empathize with others' perspectives and practice active listening, enhancing your ability to connect and communicate effectively.",
+        "Critical Thinking and Analysis": "Studying psychology hones your critical thinking skills as you analyze research, evaluate theories, and interpret data to understand human behavior.",
+        "Problem-Solving and Decision-Making": "Psychology helps you develop problem-solving skills by understanding the factors that influence behavior and making informed decisions based on psychological insights.",
+        "Communication and Interpersonal Skills": "Learning psychology fosters effective communication and interpersonal skills, enabling you to build positive relationships and navigate social dynamics.",
+        "Research and Data Interpretation": "Psychology involves research methodologies and data interpretation, teaching you to gather and analyze information to draw evidence-based conclusions.",
+        "Comment": "This is the Comment for Pshychology Subject"
     }
 ]
