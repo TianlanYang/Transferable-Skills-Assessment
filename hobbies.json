@@ -104,9 +104,6 @@
         "Comment": "This is the Cycling Hobby."
     },
     {
-        "Comment": "This is the Hiking Hobby."
-    },
-    {
         "Communication and Interpersonal Skills": "Volunteering often involves interacting with diverse groups of people, from fellow volunteers to those you're helping. Developing effective communication and interpersonal skills enhances your ability to connect and collaborate with others.",
         "Teamwork and Collaboration": "Volunteering in group settings encourages teamwork and collaboration. Learning to work together towards a common goal, share responsibilities, and support each other fosters strong teamwork skills.",
         "Problem-Solving and Adaptability": "Volunteering can present unexpected challenges or changes in plans. Developing problem-solving and adaptability skills helps you navigate various situations and find creative solutions.",
@@ -145,14 +142,6 @@
         "Social Interaction": "Playing board games encourages social interaction, communication, and collaboration. Learning to interact effectively with others, negotiate, and cooperate enhances your interpersonal skills.",
         "Patience and Resilience": "Board games can be competitive and unpredictable, requiring you to handle both wins and losses gracefully. Developing patience and resilience helps you cope with setbacks and maintain a positive attitude.",
         "Comment": "This is the Board Games Hobby."
-    },
-    {
-        "Research and Knowledge Acquisition": "Collecting often involves researching items, their history, and their significance. Learning about the objects you collect enhances your research skills and expands your knowledge in specific areas.",
-        "Organization and Attention to Detail": "Properly cataloging and displaying a collection requires organization and attention to detail. Developing these skills helps you maintain a well-organized collection and track its growth.",
-        "Critical Observation": "Collecting involves evaluating items for authenticity, condition, and value. Learning to critically observe and assess objects refines your ability to make informed judgments.",
-        "Negotiation and Networking": "Engaging with other collectors, dealers, or sellers can require negotiation skills. Learning to communicate effectively, build relationships, and negotiate deals enhances your networking abilities.",
-        "Financial Literacy": "Depending on the nature of your collection, understanding the value and market trends of collectible items can enhance your financial literacy and decision-making skills.",
-        "Comment": "This is the Collecting Hobby."
     },
     {
         "Research and Knowledge Acquisition": "Collecting often involves researching items, their history, and their significance. Learning about the objects you collect enhances your research skills and expands your knowledge in specific areas.",
@@ -209,5 +198,8 @@
         "Adaptability and Resilience": "Performing live or on camera can involve unexpected challenges. Developing adaptability and resilience helps you handle changes and setbacks gracefully.",
         "Collaboration and Teamwork": "Acting often involves working closely with directors, fellow actors, and crew members to create a cohesive production. Learning to collaborate and contribute to a team dynamic enhances your teamwork skills.",
         "Comment": "This is the Acting Hobby."
+    },
+    {
+        "Comment": "This is the Hiking Hobby."
     }
 ] 
