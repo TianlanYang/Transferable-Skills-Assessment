@@ -96,7 +96,67 @@
         "Comment": "This is the comment for Hockey soft skills"
     },
     {
-
-    }
-        
+        "Teamwork and Collaboration": "Ice hockey is a team sport that relies on effective communication, coordination, and cooperation among players. Learning to work with teammates to achieve common goals enhances teamwork and collaboration skills that are valuable in various settings.",
+        "Communication and Verbal Skills": "Clear and concise communication is essential in ice hockey, both on and off the ice. Players need to convey information quickly during games, and effective communication among teammates is crucial for successful plays.",
+        "Adaptability and Decision-Making": "Ice hockey is a fast-paced game where situations can change rapidly. Players need to adapt to evolving game scenarios, make quick decisions under pressure, and adjust strategies based on opponents' actions.",
+        "Resilience and Sportsmanship": "Dealing with wins and losses, managing emotions during intense competition, and maintaining good sportsmanship are integral to ice hockey. Developing resilience to bounce back from setbacks and showing respect for opponents contribute to personal growth.",
+        "Leadership and Accountability": "Captains and team leaders in ice hockey exemplify leadership qualities by motivating teammates, setting an example of hard work, and making critical decisions during games. Learning to take responsibility for actions and decisions fosters accountability.",
+        "Comment": "This is the comment for Lacross soft skills"
+    },
+    {
+        "Resilience and Perseverance": "Skiing can be challenging, especially for beginners. Learning to navigate slopes, improve technique, and face difficult conditions like icy terrain or adverse weather requires resilience and the ability to persist through challenges.",
+        "Adaptability": "Skiing often involves changing weather conditions, varying terrains, and different types of slopes. Skiers learn to adapt their approach and techniques to suit these changing factors, which can translate to adaptability in other aspects of life.",
+        "Risk Management": "Skiing involves an element of risk, especially when tackling more advanced slopes. Skiers learn to assess risks, make informed decisions about which slopes to attempt, and understand their own skill levels to prioritize safety.",
+        "Focus and Concentration": "Skiing demands focus and concentration to navigate down the slopes safely and effectively. Skiers need to be aware of their surroundings, anticipate obstacles, and make split-second decisions while skiing downhill.",
+        "Patience and Learning": "Skiing is a skill that takes time to master. Beginners often need to overcome initial difficulties and gradually build their technique. Patience is key to the learning process, as well as the ability to take feedback from instructors and continuously improve.",
+        "Comment": "This is the comment for Skiing soft skills"
+    },
+    {
+        "Teamwork and Collaboration": "Soccer is a team-oriented sport that requires players to work together seamlessly. Effective passing, communication, and understanding of teammates' movements are crucial for creating scoring opportunities and defending against opponents.",
+        "Communication and Coordination": "Clear and timely communication is essential on the soccer field. Players need to communicate their intentions to teammates, call for passes, and coordinate strategies to ensure effective play and quick decision-making.",
+        "Adaptability and Decision-Making": "Soccer is a dynamic game with constantly changing situations. Players must make decisions in real-time, adapt to opponents' movements, and adjust their tactics based on the flow of the game.",
+        "Resilience and Sportsmanship": "Dealing with both victories and defeats, managing emotions during intense competition, and maintaining sportsmanship are integral to soccer. Developing resilience to bounce back from setbacks and showing respect for opponents contribute to personal growth.",
+        "Leadership and Accountability": "Leaders often emerge on the soccer field, whether it's the captain or players who naturally take charge. Leading by example, motivating teammates, and taking responsibility for both successes and failures build leadership qualities.",
+        "Comment": "This is the comment for Soccer soft skills"
+    },
+    {
+        "Discipline and Consistency": "Swimming requires regular practice to improve technique, endurance, and speed. Consistently showing up for training sessions demonstrates discipline and a commitment to personal growth. This skill can be applied to other areas of life, such as work and personal goals.",
+        "Patience": "Learning to swim efficiently and mastering different strokes takes time. Progress may be gradual, and setbacks can occur. Patience is essential as you work on refining your skills, facing challenges, and overcoming obstacles.",
+        "Goal Setting": "Swimmers often set goals for themselves, whether it's achieving a specific time in a race or mastering a particular stroke. Setting realistic and achievable goals and planning the steps to reach them is a skill that can be transferred to various aspects of life.",
+        "Time Management": "Balancing swim practice, workouts, and other commitments requires effective time management. Swimming teaches you how to allocate time efficiently and make the most of your schedule, which can be valuable for managing a busy lifestyle.",
+        "Stress Management": "Swimming can serve as a form of stress relief. The rhythm of breathing and the sensation of being in the water can have a calming effect. Learning to manage stress in the pool can translate to better stress management techniques in other situations.",
+        "Comment": "This is the comment for Swimming soft skills"
+    },
+    {
+        "Self-Discipline": "Track and field require consistent training and practice to improve performance. Athletes must adhere to training schedules, maintain healthy habits, and push themselves even when motivation is low. Learning self-discipline in training translates to discipline in other areas of life.",
+        "Goal Setting": "Track athletes often set specific goals for improving their times, distances, or technique. Setting realistic and measurable goals and working systematically to achieve them fosters goal-setting skills that can be applied in academics, career, and personal life.",
+        "Time Management": "Balancing training sessions, school, work, and other commitments necessitates effective time management. Track athletes learn to allocate time efficiently, prioritize tasks, and manage their schedules.",
+        "Resilience and Mental Toughness": "Track and field can be physically and mentally challenging. Athletes encounter setbacks, experience competition nerves, and face tough training regimens. Developing resilience helps athletes persevere through difficulties and maintain focus on their goals.",
+        "Adaptability": "Track and field encompasses various events, from sprints to middle-distance races to throwing and jumping events. Athletes might need to adapt to different training methods, event types, and conditions. Learning to be flexible and adaptable contributes to problem-solving skills in diverse situations.",
+        "Comment": "This is the comment for Track soft skills"
+    },
+    {
+        "Teamwork and Collaboration": "Volleyball is a team sport that requires coordinated efforts among players to succeed. Effective communication, understanding your teammates' strengths, and working together to achieve a common goal are essential. These teamwork skills can be applied in various group settings, such as work or school projects.",
+        "Communication Skills": "Clear and concise communication is vital on the volleyball court to signal plays, call shots, and coordinate with teammates. Learning to communicate effectively in the fast-paced environment of a match can improve your overall communication skills in daily life.",
+        "Adaptability and Quick Decision-Making": "Volleyball involves split-second decisions based on the trajectory of the ball, your teammates' positions, and the opponents' movements. Developing the ability to adapt and make quick decisions under pressure can enhance your problem-solving skills in various situations.",
+        "Leadership Skills": "Even within a team, individuals can take on leadership roles by offering encouragement, motivating teammates, and taking initiative. Volleyball provides opportunities for players to lead by example, fostering leadership qualities that can be valuable in professional and personal contexts.",
+        "Resilience and Perseverance": "Matches can be intense, and momentum can shift quickly. Learning to bounce back from mistakes, maintain focus, and stay committed to the game plan demonstrates resilience. This skill translates to facing challenges and setbacks with determination in other areas of life.",
+        "Comment": "This is the comment for Volleyball soft skills"
+    },
+    {
+        "Discipline and Consistency": "Weightlifting requires a consistent training routine to see progress. Committing to regular workouts, setting goals, and adhering to a training plan demonstrates discipline and consistency. These skills can be applied to other areas of life that require persistence and dedication.",
+        "Patience": "Building strength and mastering proper technique in weightlifting takes time. Patience is essential as progress might not be immediate. This skill can help you handle setbacks and challenges in other aspects of life with a more composed mindset.",
+        "Focus and Concentration": "Weightlifting demands intense focus on form, technique, and safety. Paying attention to detail during lifts helps prevent injury and optimize gains. Developing focus and concentration in the weight room can enhance your ability to concentrate in other situations.",
+        "Resilience and Mental Toughness": "Weightlifting can be physically and mentally demanding. Facing heavier weights and pushing through plateaus requires mental toughness and resilience. These skills help you stay determined and composed when dealing with challenges beyond the gym.",
+        "Self-Confidence": "As you see progress and improvements in your lifting abilities, your self-confidence can increase. This newfound confidence can extend to other areas of your life, helping you tackle challenges with a positive outlook.",
+        "Comment": "This is the comment for Weightlifting soft skills"
+    },
+    {
+        "Discipline and Dedication": "Wrestling requires consistent training and adherence to rigorous routines. Wrestlers must commit to regular practice, weight management, and conditioning. This discipline can translate to other aspects of life that demand dedication and self-control.",
+        "Resilience and Perseverance": "Wrestling is physically and mentally demanding. Wrestlers often face setbacks, injuries, and tough opponents. Learning to overcome challenges and setbacks with resilience teaches valuable life skills in bouncing back from adversity.",
+        "Problem Solving": "Wrestling is a dynamic sport where quick thinking is crucial. Wrestlers must adjust their strategies on the fly based on their opponent's moves and reactions. Developing problem-solving skills during matches can apply to various situations requiring adaptability.",
+        "Conflict Resolution": "Wrestling requires controlled physical confrontation, teaching athletes to manage conflict while respecting rules and opponents. This skill can contribute to healthy conflict resolution in various personal and professional settings.",
+        "Focus and Concentration": "Wrestling demands intense focus during matches, as a lapse in concentration can lead to mistakes. Developing the ability to concentrate under pressure can improve focus skills for other endeavors.",
+        "Comment": "This is the comment for Wrestiling soft skills"
+    }       
 ]
