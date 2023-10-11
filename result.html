@@ -3623,6 +3623,15 @@
                             div_id2_2_1_Content = jsonData[5][communicationKey];
                         }
 
+                        if (sportValue === "Dance Team") {
+                            const pElement = div_id2_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_1_Content = jsonData[6][communicationKey];
+                        }
+
                         // Rest of your code for event listeners
                         div_id2_2_1.addEventListener("mouseenter", () => {
                             if (div_id2_2_1_Content) {
@@ -3690,6 +3699,15 @@
                                 pElement.textContent = communicationKey;
                             }
                             div_id2_2_2_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Dance Team") {
+                            const pElement = div_id2_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_2_Content = jsonData[6][communicationKey];
                         }
 
                         // Rest of your code for event listeners
@@ -3762,6 +3780,15 @@
                             div_id2_2_3_Content = jsonData[5][communicationKey];
                         }
 
+                        if (sportValue === "Dance Team") {
+                            const pElement = div_id2_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_3_Content = jsonData[6][communicationKey];
+                        }
+
 
                         div_id2_2_3.addEventListener("mouseenter", () => {
                             // const contentKey = "Basketball"; // Update this with your actual content key
@@ -3825,13 +3852,22 @@
                             div_id2_2_4_Content = jsonData[4][communicationKey];
                         }
 
-                        if (sportValue === "Cheerleading") {
+                        if (sportValue === "Cross Country") {
                             const pElement = div_id2_2_4.nextElementSibling;
                             const communicationKey = Object.keys(jsonData[5])[3];
                             if (pElement && pElement.tagName === "P") {
                                 pElement.textContent = communicationKey;
                             }
                             div_id2_2_4_Content = jsonData[5][communicationKey];
+                        }
+
+                        if (sportValue === "Dance Team") {
+                            const pElement = div_id2_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[6])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id2_2_4_Content = jsonData[6][communicationKey];
                         }
 
 
@@ -3861,7 +3897,7 @@
                             div_id2_2_5_Content = jsonData[0][communicationKey];
                         }
 
-                        if (sportValue === "Baseball") {
+                        if (sportValue === "Baseball/Softball") {
                             const pElement = div_id2_2_5.nextElementSibling;
                             const communicationKey = Object.keys(jsonData[1])[4];
                             if (pElement && pElement.tagName === "P") {
@@ -3897,16 +3933,16 @@
                             div_id2_2_5_Content = jsonData[4][communicationKey];
                         }
 
-                        if (sportValue === "Cheerleading") {
+                        if (sportValue === "Cross Country") {
                             const pElement = div_id2_2_5.nextElementSibling;
                             const communicationKey = Object.keys(jsonData[5])[4];
                             if (pElement && pElement.tagName === "P") {
                                 pElement.textContent = communicationKey;
                             }
-                            div_id2_2_5_Content = jsonData[5][communicationKey];
+                            div_id2_2_5_Content = jsonData[6][communicationKey];
                         }
 
-                        if (sportValue === "Cross Country") {
+                        if (sportValue === "Dance Team") {
                             const pElement = div_id2_2_5.nextElementSibling;
                             const communicationKey = Object.keys(jsonData[6])[4];
                             if (pElement && pElement.tagName === "P") {
