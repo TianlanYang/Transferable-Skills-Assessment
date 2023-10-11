@@ -1,0 +1,148 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body {
+  background-color:  rgb(17, 29, 74);
+  line-height: 1.5;
+}
+
+.header {
+  border-radius: 20px;
+  width: 700px;
+  height: 400px;
+  margin: 100px auto;
+  padding: 40px 100px 40px 150px;
+  background: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  /* background-color: #008080; */
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.welcome-mgs {
+  position: relative;
+  left: -50px;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-mgs h2 {
+  color: #2b78e4;
+  font-size: 32px;
+  margin: 0;
+}
+
+.welcome-mgs h4 {
+  margin: 0;
+}
+
+.personal-form {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 50%;
+  /* justify-content: center;
+  text-align: center; */
+}
+
+.personal-form div:first-child{
+  position: relative;
+  display: block;
+}
+
+.personal-form div:first-child span,
+.personal-form div:first-child i{
+  position: absolute; 
+  display: inline-block;
+  vertical-align: middle; /* use this property to vertically align the elements */
+  font-size: 14px !important;
+}
+.personal-form div:nth-child(2) p{
+  position: absolute;
+  vertical-align: middle; /* use this property to vertically align the elements */
+  font-size: 14px !important;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: #27ba9b;
+  font-size: 20px;
+}
+
+.form-item input {
+  flex: 1;
+  width: 300px;
+  height: 50px;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-policy {
+  display: block;
+  float: right;
+  margin-bottom: 10px;
+  color: #27ba9b;
+  font-size: 14px;
+}
+
+.iconfont .icon-quhe-icon_gouxuan {
+  color: #2b78e4;
+}
+
+/* register button */
+form .register-button {
+  outline: none;
+  border: none;
+  background: #06b909;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+  width: 50%;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+form .register-button:hover {
+  background: #03ad06;
+  cursor: pointer;
+}
+
+/* login button */
+form .login-button {
+  outline: none;
+  border: none;
+  background: #1877f2;
+  padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+  width: 50%;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+form .login-button:hover {
+  background: #0f71f1;
+  cursor: pointer;
+}
