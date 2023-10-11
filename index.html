@@ -1,464 +1,203 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
-	<meta charset='UTF-8'>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-	<title>Profile & Goals Plan</title>
-	<link rel='stylesheet' href='./question.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3868895_h8oc368jh7.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
 
+
+    <!-- <link rel="stylesheet" href="./dist/output.css"> -->
 </head>
 
 <body>
+    <div class="header">
+        <div class="container">
+            <div class="welcome-mgs">
+                <h2>Welcome to your <br> Transferable Skills Assessment </h2>
+                <h4>See how your future works here.</h4>
+            </div>
+            <form class="personal-form" method="post">
+                <div class="form-item">
+                    <input class='useremail' id='email' name='useremail' type="email" placeholder="UserEmail"
+                        autocomplete="off">
+                    <span class='spanUser'></span>
+                    <i class="iconfont icon-duigou1"></i>
+                </div>
+                <div class="form-item">
+                    <input class='password' id='password1' type="password" placeholder="Please enter your password"
+                        autocomplete="off">
+                    <p class="pPsd"></p>
+                    <i class="iconfont icon-duigou1"></i>
+                    <span class="toggle-password">👁️</span><br>
+                <!-- </div> <button class="register-button" type="button"
+                    onclick="location.href='/Users/diyayang/Coding/Dr.Thomas/StudentPersonalityDesign/register.html'"">Register</button> -->
+
+                <br><button class=" login-button" id="login_btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- vaildation -->
+    <script>
+        const toggles = document.querySelectorAll(".toggle-password")
+        toggles.forEach(text => {
+            text.addEventListener('click', () => {
+                const password = document.querySelectorAll('.password')
+
+                password.forEach(text1 => {
+                    if (text1.type === 'password') {
+                        text1.type = 'text';
+                        toggles.textContent = '👁️'
+                    } else {
+                        text1.type = 'password'
+                        toggles.textContent = '👁️'
+                    }
+                })
+            })
+        })
+
+        //Regular expressions to determine username, email, etc. input requirements
+        const regUser = /^[a-zA-Z0-9-_ ]{3,12}$/
+        const inputUser = document.querySelector('.useremail')
+        const spanUser = inputUser.nextElementSibling
+        const iUser = inputUser.nextElementSibling.nextElementSibling
+        iUser.style.display = 'none'
+        inputUser.addEventListener('blur', function () {
+            if (regUser.test(this.value.trim())) {
+                iUser.style.display = 'block'
+                spanUser.style.display = 'none'
+            } else if (!regUser.test(this.value.trim())) {
+                iUser.style.display = 'none'
+                spanUser.style.display = 'block'
+                spanUser.innerHTML = 'Username is not valid. It should between 3-12 Characters'
+            }
+        })
+
+        const regPsd = /^[a-zA-Z0-9-_]{6,}$/
+        const inputPsd = document.querySelector('.password')
+        const pPsd = inputPsd.nextElementSibling
+        const iPsd = inputPsd.nextElementSibling.nextElementSibling
+        iPsd.style.display = 'none'
+        inputPsd.addEventListener('blur', function () {
+            if (regPsd.test(this.value.trim())) {
+                iPsd.style.display = 'block'
+                pPsd.style.display = 'none'
+            } else if (!regPsd.test(this.value.trim())) {
+                iPsd.style.display = 'none'
+                pPsd.style.display = 'block'
+                pPsd.innerHTML = 'Username is not valid. It should larger than 6 Characters'
+            }
+        })
+
+
+
+    </script>
+
+
+    <!-- firebase configs -->
+    <script type="module">
+
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+
+        import { getDatabase, get, set, update, remove, ref, child }
+            from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            onAuthStateChanged,
+            signOut
+        }
+            from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
-	<nav>
-		<div class='nav-container'>
-			<a href='https://immense-sea-87491.herokuapp.com/' class='custom-text custom-ml'>HOME</a>
-			<a href='#' class='custom-text custom-ml'></a>
-		</div>
-	</nav>
-
-
-	<h1>Profile & Goals Plan</h1>
-	<p style="color:rgba(48, 122, 219, 0.898);"><b>Questions with (*) are required.</b></p>
-
-	<h2>Complete each question. If you need assiatance or ideas just ask the STSA
-		AI Chat.</h2><br>
-
-
-	<!-- try to use a container -->
-	<div class='survey-questions'>
-		<form action='' method='post' id='surveyForm'>
-
-			<div class='question'>
-				Your Full Name(*):<br>
-
-				<input type='text' id='fullName' name='fullName' placeholder='Full Name' class="text-capitalize"
-					require>
-				<label for='FullName'></label>
-			</div>
-
-
-
-			<!-- <div class='question'>
-				Your favorite sport(*):<br>
-				<input type='text' id='sport' name='sport' placeholder='Favorite Sport' required>
-				<label for='sport'></label>
-			</div> -->
-			Your favorite sport(*):<br>
-			<select id="sport" required>
-				<option value="" disabled selected hidden>Select an option</option>
-				<option value="Badminton">Badminton</option>
-				<option value="Baseball/softball">Baseball/softball</option>
-				<option value="Basketball">Basketball</option>
-				<option value="Bowling">Bowling</option>
-				<option value="Cheerleading">Cheerleading</option>
-				<option value="Cross Country">Cross Country</option>
-				<option value="Dance Team">Dance Team</option>
-				<option value="Field Hockey">Field Hockey</option>
-				<option value="Football">Football</option>
-				<option value="Golf">Golf</option>
-				<option value="Gymnastics">Gymnastics</option>
-				<option value="Hockey">Hockey</option>
-				<option value="Lacorss">Lacorss</option>
-				<option value="Skiing">Skiing</option>
-				<option value="Soccer">Soccer</option>
-				<option value="Tennis">Tennis</option>
-				<option value="Swimming">Swimming</option>
-				<option value="Track">Track</option>
-				<option value="Volleyball">Volleyball</option>
-				<option value="Water Polo">Water Polo</option>
-				<option value="Weight Lifiting">Weight Lifiting</option>
-				<option value="Wrestling">Wrestling</option>
-
-			</select><br>
-
-
-
-			<div class='question'>
-				<br>
-				<label for='position'>What is your favorite position in this sport?(*)<br></label>
-				<select id="position" required>
-					<option value="" disabled selected hidden>Select an option</option>
-				</select>
-			</div>
-
-			<div class='question'>
-				<label for='hobby'>What is your favorite hobby?(*)<br></label>
-				<select id="hobby" required>
-					<option value="" disabled selected hidden>Select an option</option>
-					<option value="Reading">Reading</option>
-					<option value="Writing">Writing</option>
-					<option value="Drawing/Painting">Drawing/Painting</option>
-					<option value="Playing a musical instrument">Playing a musical instrument</option>
-					<option value="Photography">Photography</option>
-					<option value="Cooking/Baking">Cooking/Baking</option>
-					<option value="Dancing">Dancing</option>
-					<option value="Gaming">Gaming</option>
-					<option value="Coding/Programming">Coding/Programming</option>
-					<option value="DIY">DIY</option>
-					<option value="Gardening">Gardening</option>
-					<option value="Film-making">Film-making</option>
-					<option value="Cycling">Cycling</option>
-					<option value="Hiking">Hiking</option>
-					<option value="Volunteering">Volunteering</option>
-					<option value="Fashion Design">Fashion Design</option>
-					<option value="Robotics">Robotics</option>
-					<option value="Magic Tricks">Magic Tricks</option>
-					<option value="Board Games">Board Games</option>
-					<option value="Collecting">Collecting</option>
-					<option value="Skateboarding">Skateboarding</option>
-					<option value="Comedian">Comedian</option>
-					<option value="Music Production">Music Production</option>
-					<option value="Singer/Rapper">Singer/Rapper</option>
-					<option value="Fitness Training">Fitness Training</option>
-					<option value="Acting">Acting</option>
-					<option value="N/A">I don't have one.</option>
-				</select><br>
-			</div>
-
-
-			<div class='question'>
-				<label for='subject'>What else do you enjoy doing, name one more hobby you enjoy doing.(*)<br></label>
-				<select id="hobby2" required>
-					<option value="" disabled selected hidden>Select an option</option>
-					<option value="Reading">Reading</option>
-					<option value="Writing">Writing</option>
-					<option value="Drawing/Painting">Drawing/Painting</option>
-					<option value="Playing a musical instrument">Playing a musical instrument</option>
-					<option value="Photography">Photography</option>
-					<option value="Cooking/Baking">Cooking/Baking</option>
-					<option value="Dancing">Dancing</option>
-					<option value="Gaming">Gaming</option>
-					<option value="Coding/Programming">Coding/Programming</option>
-					<option value="DIY">DIY</option>
-					<option value="Gardening">Gardening</option>
-					<option value="Film-making">Film-making</option>
-					<option value="Cycling">Cycling</option>
-					<option value="Hiking">Hiking</option>
-					<option value="Volunteering">Volunteering</option>
-					<option value="Fashion Design">Fashion Design</option>
-					<option value="Robotics">Robotics</option>
-					<option value="Magic Tricks">Magic Tricks</option>
-					<option value="Board Games">Board Games</option>
-					<option value="Collecting">Collecting</option>
-					<option value="Skateboarding">Skateboarding</option>
-					<option value="Comedian">Comedian</option>
-					<option value="Music Production">Music Production</option>
-					<option value="Singer/Rapper">Singer/Rapper</option>
-					<option value="Fitness Training">Fitness Training</option>
-					<option value="Acting">Acting</option>
-					<option value="N/A">I don't have one.</option>
-				</select><br>
-
-			</div>
-
-			<div class='question'>
-				<label for='subject'>What is/was your favorite academic subject in grade school?(*)<br></label>
-				<select id="subject" required>
-					<option value="" disabled selected hidden>Select an option</option>
-					<option value="English">English</option>
-					<option value="Math">Math</option>
-					<option value="Science">Science</option>
-					<option value="Social Studies">Social Studies</option>
-					<option value="Foreign Language">Foreign Language</option>
-					<option value="Home Economics">Home Economics</option>
-					<option value="Art">Art</option>
-					<option value="Music">Music</option>
-					<option value="Computer Science">Computer Science</option>
-					<option value="Health Education">Health Education</option>
-					<option value="Business/Entreprenuership">Business/Entreprenuership</option>
-					<option value="Pshychology">Pshychology</option>
-					<option value="Specialty">Specialty</option>
-				</select><br>
-			</div>
-
-			<div class='question'>
-				<label for='career'>What is your desired career(Check the recommended careers page for
-					ideas)(*)<br></label>
-				<input type='text' id='career' name='career' placeholder='Career' class="text-capitalize" required>
-			</div>
-
-
-			<div class='question'>
-				<label for=' gpa'>If you are a student, is your GPA in a good standing?(*)<br></label>
-				<label for='option1'>Yes</label>
-				<input type='radio' id='gpa_option1' name='gpa_option' value='Yes'>
-
-				<label for='option2'>No</label>
-				<input type='radio' id='gpa_option2' name='gpa_option' value='No'>
-
-				<label for='option3'>N/A</label>
-				<input type='radio' id='gpa_option3' name='gpa_option' value='N/A'>
-			</div>
-
-			<div class='question'>
-				<label for=' college-student-major'>If you are a college student, Do you
-					know your major or are you currently in a major that aligns with your
-					desired career?(*)<br></label>
-
-				<label for='option1'>Yes</label>
-				<input type='radio' id='major_option1' name='major_option' value='Yes'>
-				<label for='option2'>No</label>
-				<input type='radio' id='major_option2' name='major_option' value='No'>
-				<label for='option3'>N/A</label>
-				<input type='radio' id='major_option3' name='major_option' value='N/A'>
-			</div>
-
-
-			<div class='question''>
-				<label for=' courses-in-college'>Are you currently in courses or have you
-				taken courses that are aligned to your desired career?(*)<br></label>
-
-				<label for='option1'>Yes</label>
-				<input type='radio' id='courses_option1' name='courses_option' value='Yes'>
-				<label for='option2'>No</label>
-				<input type='radio' id='courses_option2' name='courses_option' value='No'>
-			</div>
-
-			<div class='question''>
-					<label for=' ppl-pursue'>Do you know someone who is alreay in the career
-				field you would like to pursue?(*)<br></label>
-
-				<label for='option1'>Yes</label>
-				<input type='radio' id='ppl_option1' name='ppl_option' value='Yes'>
-
-				<label for='option2'>No</label>
-				<input type='radio' id='ppl_option2' name='ppl_option' value='No'>
-
-			</div>
-
-			<div class='question''>
-				<label for=' company'>Do you have a company you want to work for?(*)<br></label>
-				<label for='option1'>Yes</label>
-				<input type='radio' id='company_option1' name='company_option' value='Yes'>
-				<label for='option2'>No</label>
-				<input type='radio' id='company_option2' name='company_option' value='No'>
-			</div>
-
-			<div class='question'>If yes, what is the name of the company?
-				<label for='career'><br></label>
-				<input type='text' id='career_company' name='career_company' placeholder='Career'
-					class="text-capitalize">
-			</div>
-
-			<!-- <div class='question'>
-				<label for='strengths'>If you habe taken the Gallup Strengths
-					Assessment,What are your top 5 strengths?<br></label>
-				<input type='text' id='strengths1' name='strengths1' placeholder='Strengths 1'><br>
-				<input type='text' id='strengths2' name='strengths2' placeholder='Strengths 2'><br>
-				<input type='text' id='strengths3' name='strengths3' placeholder='Strengths 3'><br>
-				<input type='text' id='strengths4' name='strengths4' placeholder='Strengths 4'><br>
-				<input type='text' id='strengths5' name='strengths5' placeholder='Strengths 5'><br>
-
-			</div> -->
-			<div class='question'>
-				<label for='goals'>Write 3 golas or tasks you will do in the next 3 months.
-					They can be eduactional, professional or career goals.<br></label>
-				<input type='text' id='goals1' name='goals1' placeholder='Goal 1' class="text-capitalize"><br>
-				<input type='text' id='goals2' name='goals2' placeholder='Goal 2' class="text-capitalize"><br>
-				<input type='text' id='goals3' name='goals3' placeholder='Goal 3' class="text-capitalize"><br>
-
-			</div>
-
-			<div class='question'>
-				<label for='support-person'>Identify a support person who can keep you
-					accountable to your goals.<br></label>
-				<input type='text' id='support_person1' name='support_person1' placeholder='Person 1'
-					class="text-capitalize"><br>
-				<input type="email" id="support_person1_email" placeholder="Person1's Email"><br>
-
-				<input type='text' id='support_person2' name='support_person2' placeholder='Person 2'
-					class="text-capitalize"><br>
-				<input type="email" id="support_person2_email" placeholder="Person2's Email"><br><br>
-				<label for='student_email'>Enter your email to receive a copy of your answers.<br></label>
-				<input type='text' id='student_email' name='student_email' placeholder='Your Email'><br>
-			</div>
-			<p><b>Check your answers and click the submit button below.</b></p>
 
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCkahzJE1QQxekDHPVHp4jM2CGS9MJuHyQ",
+            authDomain: "stsa-compass.firebaseapp.com",
+            projectId: "stsa-compass",
+            storageBucket: "stsa-compass.appspot.com",
+            messagingSenderId: "952259702189",
+            appId: "1:952259702189:web:0c4104d466caf2e7974524"
+        };
 
 
-			<div class='question'>
-				<button id='submit' type='submit'>Submit</button>
-			</div>
 
 
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const auth = getAuth(app);
 
 
-		</form>
+        //refrences
 
-	</div>
+        // // const username = document.getElementById('username');
+        // const email = document.getElementById('email');
+        // //const schoolName = document.getElementById('schoolName');
+        // const pass = document.getElementById('password1');
+        const login_btn = document.getElementById('login_btn');
 
+       
+       
 
+     
 
-
+        //login function
+        function login() {
+            event.preventDefault();
+    
 
+            const email = document.getElementById('email').value;
+            const pass= document.getElementById('password1').value;
+            var username = localStorage.getItem('username');
+           // console.log(username);
 
+            signInWithEmailAndPassword(auth, email, pass)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                   
+                    console.log("dissss" + username);
+                    //console.log("ssss"+ username);
+                    // You can use the Firebase user object here for other operations (fetching user data etc.)
+                    alert('Login successful!');
+                    
+                    window.location.href = 'index.html';
+                    // Redirect to a different page or update UI here...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert('Error: ' + errorMessage);
+                    // Handle Errors here.
+                });
+        }
 
+        login_btn.addEventListener('click', login);
 
 
 
-	<!-- firebase -->
-	<script type='module'>
-		import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
 
-		import { getDatabase, get, set, update, remove, ref, child }
-			from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js';
 
 
-		// Your web app's Firebase configuration
-		const firebaseConfig = {
-			apiKey: 'AIzaSyCkahzJE1QQxekDHPVHp4jM2CGS9MJuHyQ',
-			authDomain: 'stsa-compass.firebaseapp.com',
-			projectId: 'stsa-compass',
-			storageBucket: 'stsa-compass.appspot.com',
-			messagingSenderId: '952259702189',
-			appId: '1:952259702189:web:0c4104d466caf2e7974524'
-		};
 
 
-		// Initialize Firebase
-		const app = initializeApp(firebaseConfig);
-		const db = getDatabase(app);
+    </script>
 
-		const conversationInDb = ref(db);
 
-
-		//reference
-		//var name = document.getElementById('name');
-		var fullName = document.getElementById('fullName');
-
-
-
-		var sport = document.getElementById('sport');
-		//var soft_skill = document.getElementById('soft_skill');
-		var position = document.getElementById('position');
-
-		var hobby = document.getElementById('hobby');
-		var hobby2 = document.getElementById('hobby2');
-		var subject = document.getElementById('subject');
-		//var soft_skill_position = document.getElementById('soft_skill_position');
-		var career = document.getElementById('career');
-
-		// var gpa_value = document.querySelector('input[name="gpa_option"]:checked').value;
-		// var major_value = document.querySelector('input[name="major_option"]:checked').value;
-		// var courses_value = document.querySelector('input[name="courses_option"]:checked').value;
-		// var ppl_value = document.querySelector('input[name="ppl_option"]:checked').value;
-		// var company_value = document.querySelector('input[name="company_option"]:checked').value;
-
-
-		// var strengths1 = document.getElementById('strengths1');
-		// var strengths2 = document.getElementById('strengths2');
-		// var strengths3 = document.getElementById('strengths3');
-		// var strengths4 = document.getElementById('strengths4');
-		// var strengths5 = document.getElementById('strengths5');
-
-		var goals1 = document.getElementById('goals1');
-		var goals2 = document.getElementById('goals2');
-		var goals3 = document.getElementById('goals3');
-
-
-		var support_person1 = document.getElementById('support_person1');
-		var support_person2 = document.getElementById('support_person2');
-		var support_person1_email = document.getElementById('support_person1_email');
-		var support_person2_email = document.getElementById('support_person2_email');
-		var student_email = document.getElementById('student_email');
-
-
-		var submitBtn = document.getElementById('submit');
-		// let username= fullName.value;
-		// var username = localStorage.getItem('username');
-		// console.log(username);
-		//console.log('fffffffff'+fullName);
-
-
-
-		//insert data to database
-
-		function insertData() {
-
-
-			event.preventDefault();
-			let form = document.getElementById('surveyForm'); // 将'yourFormID'替换为你的表单ID
-
-			if (!form.checkValidity()) {
-				// 表单无效，由于我们使用了 preventDefault，浏览器将显示验证消息。
-				return;
-			}
-			//console.log('inserData works');
-			let gpa_value = document.querySelector('input[name="gpa_option"]:checked')?.value;
-			let major_value = document.querySelector('input[name="major_option"]:checked')?.value;
-			let courses_value = document.querySelector('input[name="courses_option"]:checked')?.value;
-			let ppl_value = document.querySelector('input[name="ppl_option"]:checked')?.value;
-			let company_value = document.querySelector('input[name="company_option"]:checked')?.value;
-
-
-			set(ref(db, '/UserList/' + fullName.value + '/Answers'), {
-
-
-				//Name: name.value,
-				Full_Name: fullName.value,
-				Favorite_Sport: sport.value,
-				//Soft_skill: soft_skill.value,
-				Position_In_Sport: position.value,
-				Favorite_Hobby: hobby.value,
-				Second_Favorite_Hobby: hobby2.value,
-
-				Favorite_Subject: subject.value,
-				//Soft_skill_position: soft_skill_position.value,
-				Desired_Career: career.value,
-
-
-				Good_Gpa: gpa_value,
-				Aware_Major: major_value,
-				Taken_Courses: courses_value,
-				Pursue_Ppl: ppl_value,
-				Dream_Company: company_value,
-
-				// Strengths1: strengths1.value,
-				// Strengths2: strengths2.value,
-				// Strengths3: strengths3.value,
-				// Strengths4: strengths4.value,
-				// Strengths5: strengths5.value,
-
-				Goals1: goals1.value,
-				Goals2: goals2.value,
-				Goals3: goals3.value,
-
-				Support_person1: support_person1.value,
-				Support_person2: support_person2.value,
-				Support_person1_email: support_person1_email.value,
-				Support_person2_email: support_person2_email.value,
-				Student_email:student_email.value
-
-			})
-				.then(() => {
-					alert('data stored sucessfully!')
-					const fullNameValue = document.getElementById('fullName').value;
-					localStorage.setItem('fullName', fullNameValue);
-					console.log('hhhhhhhh' + support_person1_email.value);
-					window.location.href = './result.html';
-				})
-				.catch((error) => {
-					alert('Uncessfully stored!' + error)
-				});
-
-		}
-
-
-		//only submit or enter will bring to next page,but not the submit survey btn.
-		//submit.addEventListener('click', insertData);
-		surveyForm.addEventListener('submit', insertData);
-
-	</script>
-
-
-	<script src="./js/dropDownPosition.js"></script>
-
-	<script src="./js/firstLetterCaptial.js"></script>
 
 </body>
+
+
 
 </html>
