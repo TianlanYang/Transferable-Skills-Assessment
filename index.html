@@ -63,7 +63,8 @@
         })
 
         //Regular expressions to determine username, email, etc. input requirements
-        const regUser = /^[a-zA-Z0-9-_ ]{3,12}$/
+        //const regUser = /^[a-zA-Z0-9-_ ]{3,12}$/
+        const regUser = /^.*$/
         const inputUser = document.querySelector('.useremail')
         const spanUser = inputUser.nextElementSibling
         const iUser = inputUser.nextElementSibling.nextElementSibling
@@ -79,7 +80,8 @@
             }
         })
 
-        const regPsd = /^[a-zA-Z0-9-_]{6,}$/
+        //const regPsd = /^[a-zA-Z0-9-_]{6,}$/
+        const regPsd = /^.*$/
         const inputPsd = document.querySelector('.password')
         const pPsd = inputPsd.nextElementSibling
         const iPsd = inputPsd.nextElementSibling.nextElementSibling
