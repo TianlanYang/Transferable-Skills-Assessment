@@ -397,9 +397,9 @@
         const sport = document.querySelector(".sport");
         const Hobby = document.querySelector(".Hobby");
         const position = document.querySelector(".position");
-        //const Hobby2 = document.querySelector(".Hobby2");
+        const Hobby2 = document.querySelector(".Hobby2");
         const subject = document.querySelector(".subject");
-        const career = document.querySelector(".career");
+        //const career = document.querySelector(".career");
 
         //const userFulldataRef = ref(db);
         const fullNameValue = localStorage.getItem('fullName');
@@ -410,12 +410,12 @@
         const sportRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Sport');
         const hobbyRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Hobby');
         const subjectRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Subject');
-        const careertRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Desired_Career');
+        //const careertRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Desired_Career');
         const positionRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Position_In_Sport');
         const support_person1_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person1_email');
         const support_person2_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person2_email');
         const student_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Student_email');
-        //const hobby2Ref = ref(db, 'UserList/' + fullNameValue + '/Answers/Second_Favorite_Hobby');
+        const hobby2Ref = ref(db, 'UserList/' + fullNameValue + '/Answers/Second_Favorite_Hobby');
 
 
 
@@ -471,6 +471,19 @@
             console.error(error);
         });
 
+        get(hobby2Ref).then((snapshot) =>{
+            if (snapshot.exists()){
+                const hobby2Val = snapshot.val();
+                Hobby2.textContent = hobby2Val;
+
+            }
+            else{
+                console.log("No data available");
+            }
+        }).catch((error)=>{
+            console.error(error);
+        });
+
        
 
         get(positionRef).then((snapshot) => {
@@ -500,19 +513,19 @@
             console.error(error);
         });
 
-        get(careertRef).then((snapshot) => {
-            if (snapshot.exists()) {
-                const careerVal = snapshot.val();
-                career.textContent = careerVal;
-                //console.log("88888" + sportValue); // This will print the value of Sport
-                // Here you can use sportValue as per your requirement
-            }
-            else {
-                console.log("No data available");
-            }
-        }).catch((error) => {
-            console.error(error);
-        });
+        // get(careertRef).then((snapshot) => {
+        //     if (snapshot.exists()) {
+        //         const careerVal = snapshot.val();
+        //         career.textContent = careerVal;
+        //         //console.log("88888" + sportValue); // This will print the value of Sport
+        //         // Here you can use sportValue as per your requirement
+        //     }
+        //     else {
+        //         console.log("No data available");
+        //     }
+        // }).catch((error) => {
+        //     console.error(error);
+        // });
 
 
 
@@ -554,7 +567,7 @@
 
             const fields = [
                 'Full_Name', 'Aware_Major', 'Taken_Courses', 'Good_Gpa',
-                'Desired_Career', 'Dream_Company', 'Pursue_Ppl', 'Favorite_Sport',
+                'Second_Favorite_Hobby', 'Dream_Company', 'Pursue_Ppl', 'Favorite_Sport',
                 'Position_In_Sport', 'Favorite_Subject', 'Favorite_Hobby'
             ];
 
