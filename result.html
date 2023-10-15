@@ -404,8 +404,8 @@
         //const career = document.querySelector(".career");
 
         //const userFulldataRef = ref(db);
-        const fullNameValue = localStorage.getItem('fullName');
-        console.log("jjjjjjj" + fullNameValue)
+        // const fullNameValue = localStorage.getItem('fullName');
+        // console.log("jjjjjjj" + fullNameValue)
 
         const userUID = Cookies.get("userUID");
         //console.log('result页面:'+ Cookies.get('userUID'));
@@ -579,6 +579,10 @@
 
 
             const data2 = snapshot2.val();
+            const fullnameRef = ref(db, 'UserList/' + userUID + '/Answers/Full_Name');
+            const snapshotName = await get(fullnameRef);
+            const fullNameValue = snapshotName.val();
+            //console.log('ddddd'+fullNameValue);
 
 
 
