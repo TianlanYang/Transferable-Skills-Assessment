@@ -7,7 +7,7 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>Transferable Skills</title>
 	<link rel='stylesheet' href='./question.css'>
-	
+
 
 
 </head>
@@ -367,8 +367,15 @@
 		function fillFormWithUserData(userData) {
 			// 用userData填充表单
 			if (userData.Full_Name) document.getElementById('fullName').value = userData.Full_Name;
-			if (userData.Favorite_Sport) document.getElementById('sport').value = userData.Favorite_Sport;
-			if (userData.Position_In_Sport) document.getElementById('position').value = userData.Position_In_Sport;
+			if (userData.Favorite_Sport) {
+				const sportDropdown = document.getElementById('sport');
+				sportDropdown.value = userData.Favorite_Sport;
+				sportDropdown.dispatchEvent(new Event('change'));
+			}
+			if (userData.Position_In_Sport){
+				document.getElementById('position').value = userData.Position_In_Sport;
+
+			}
 			if (userData.Favorite_Hobby) document.getElementById('hobby').value = userData.Favorite_Hobby;
 			if (userData.Second_Favorite_Hobby) document.getElementById('hobby2').value = userData.Second_Favorite_Hobby;
 			if (userData.Favorite_Subject) document.getElementById('subject').value = userData.Favorite_Subject;
@@ -473,7 +480,8 @@
 
 		//insert data to database
 
-		function insertData() {
+		function insertData(event) {
+			console.log("submit事件被触发了！");
 
 
 			event.preventDefault();
@@ -500,7 +508,7 @@
 
 
 			const userUID = Cookies.get('userUID');
-			console.log(userUID);
+			console.log('question 页面里面的useruid'+userUID);
 			if (!userUID) {
 				console.error("UID not found in local storage. Please ensure you're logged in.");
 				return;
@@ -570,7 +578,7 @@
 	<script src="./js/dropDownPosition.js"></script>
 
 	<script src="./js/firstLetterCaptial.js"></script>
-	
+
 
 </body>
 

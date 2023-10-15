@@ -359,6 +359,8 @@
         //console.log("script");
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import Cookies from 'https://cdn.skypack.dev/js-cookie';
+
 
         import { getDatabase, get, set, update, remove, ref, child, onValue }
             from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
@@ -405,20 +407,38 @@
         const fullNameValue = localStorage.getItem('fullName');
         console.log("jjjjjjj" + fullNameValue)
 
+        const userUID = Cookies.get("userUID");
+        //console.log('result页面:'+ Cookies.get('userUID'));
 
-        const userListRef = ref(db, 'UserList/' + fullNameValue + '/Answers');
-        const sportRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Sport');
-        const hobbyRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Hobby');
-        const subjectRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Favorite_Subject');
+
+
+        const userListRef = ref(db, 'UserList/' + userUID + '/Answers');
+        const fullnameRef = ref(db, 'UserList/' + userUID + '/Answers/Full_Name');
+        const sportRef = ref(db, 'UserList/' + userUID + '/Answers/Favorite_Sport');
+        const hobbyRef = ref(db, 'UserList/' + userUID + '/Answers/Favorite_Hobby');
+        const subjectRef = ref(db, 'UserList/' + userUID + '/Answers/Favorite_Subject');
         //const careertRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Desired_Career');
-        const positionRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Position_In_Sport');
-        const support_person1_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person1_email');
-        const support_person2_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Support_person2_email');
-        const student_emailRef = ref(db, 'UserList/' + fullNameValue + '/Answers/Student_email');
-        const hobby2Ref = ref(db, 'UserList/' + fullNameValue + '/Answers/Second_Favorite_Hobby');
+        const positionRef = ref(db, 'UserList/' + userUID + '/Answers/Position_In_Sport');
+        const support_person1_emailRef = ref(db, 'UserList/' + userUID + '/Answers/Support_person1_email');
+        const support_person2_emailRef = ref(db, 'UserList/' + userUID + '/Answers/Support_person2_email');
+        const student_emailRef = ref(db, 'UserList/' + userUID + '/Answers/Student_email');
+        const hobby2Ref = ref(db, 'UserList/' + userUID + '/Answers/Second_Favorite_Hobby');
 
 
 
+        get(fullnameRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const fullnameVaule = snapshot.val();
+                studentName.textContent = fullnameVaule;
+                //console.log("88888" + sportValue); // This will print the value of Sport
+                // Here you can use sportValue as per your requirement
+            }
+            else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
 
         get(sportRef).then((snapshot) => {
             if (snapshot.exists()) {
@@ -436,25 +456,25 @@
 
 
 
-        get(userListRef).then((snapshot) => {
-            if (snapshot.exists()) {
+        // get(userListRef).then((snapshot) => {
+        //     if (snapshot.exists()) {
 
             
 
-                var data1 = snapshot.val();
-                console.log(data1);
+        //         var data1 = snapshot.val();
+        //         console.log(data1);
 
-                // const dataName = data1.Name;
-                studentName.textContent = fullNameValue;
+        //         // const dataName = data1.Name;
+        //         studentName.textContent = fullNameValue;
 
 
-            }
-            else {
-                console.log("No data available");
-            }
-        }).catch((error) => {
-            console.error(error);
-        });
+        //     }
+        //     else {
+        //         console.log("No data available");
+        //     }
+        // }).catch((error) => {
+        //     console.error(error);
+        // });
 
 
         get(hobbyRef).then((snapshot) => {
@@ -553,7 +573,7 @@
         //pdf functionnalitty
         const generatePDF = async (base64Image) => {
 
-            const dataRef2 = ref(db, 'UserList/' + fullNameValue + '/Answers');
+            const dataRef2 = ref(db, 'UserList/' + userUID + '/Answers');
 
             const snapshot2 = await get(dataRef2);
 

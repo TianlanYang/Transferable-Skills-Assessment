@@ -164,7 +164,7 @@
 
             const email = document.getElementById('email').value;
             const pass = document.getElementById('password1').value;
-            var username = localStorage.getItem('username');
+           // var username = localStorage.getItem('username');
             // console.log(username);
 
             signInWithEmailAndPassword(auth, email, pass)
@@ -174,7 +174,8 @@
                     //const user = userCredential.user;
                     const uid = userCredential.user.uid;
                     console.log(uid);
-                    Cookies.set('userUID', uid, { expires: 70 });
+                    // Cookies.set('userUID', uid, { expires: 70 });
+                    // console.log('cokkies:    '+Cookies.get('userUID'));
 
                     // You can use the Firebase user object here for other operations (fetching user data etc.)
                     alert('Login successful!');
