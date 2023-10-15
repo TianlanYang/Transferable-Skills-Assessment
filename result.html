@@ -1900,7 +1900,92 @@
                             div_id4_2_1_Content = jsonData[7][communicationKey];
                         }
 
-                        // Rest of your code for event listeners
+                        //*******************
+                        //positions for Baseball
+                        if (sportValue === "Pitcher") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[8])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[8][communicationKey];
+                        }
+
+                        if (sportValue === "Catcher") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[9])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[9][communicationKey];
+                        }
+
+                        if (sportValue === "First baseman") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[10])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[10][communicationKey];
+                        }
+
+                        if (sportValue === "Second baseman") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[11])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[11][communicationKey];
+                        }
+
+                        if (sportValue === "Third baseman") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[12])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[12][communicationKey];
+                        }
+
+                        if (sportValue === "Shortstop") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[13])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[13][communicationKey];
+                        }
+
+                        if (sportValue === "Left fielder") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[14])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[14][communicationKey];
+                        }
+
+                        if (sportValue === "Center fielder") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[15])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[15][communicationKey];
+                        }
+
+                        if (sportValue === "Right fielder") {
+                            const pElement = div_id4_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[16])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_1_Content = jsonData[16][communicationKey];
+                        }
+
+
+                        
+
                         div_id4_2_1.addEventListener("mouseenter", () => {
                             if (div_id4_2_1_Content) {
                                 showTextBox("4.1", div_id4_2_1_Content);
@@ -1982,11 +2067,41 @@
 
                         if (sportValue === "Center") {
                             const pElement = div_id4_2_2.nextElementSibling;
-                            const communicationKey = Object.keys(jsonData[7])[0];
+                            const communicationKey = Object.keys(jsonData[7])[1];
                             if (pElement && pElement.tagName === "P") {
                                 pElement.textContent = communicationKey;
                             }
                             div_id4_2_2_Content = jsonData[7][communicationKey];
+                        }
+
+
+                        //*******************
+                        //positions for Baseball
+                        if (sportValue === "Pitcher") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[8])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[8][communicationKey];
+                        }
+
+                        if (sportValue === "Catcher") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[9])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[9][communicationKey];
+                        }
+
+                        if (sportValue === "First baseman") {
+                            const pElement = div_id4_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[10])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id4_2_2_Content = jsonData[10][communicationKey];
                         }
 
 
