@@ -19,8 +19,9 @@
     <div class="header">
         <div class="container">
             <div class="welcome-mgs">
-                <h2>For security reasons,<br> Please re-enter your login credentials.</h2>
-                
+                <h2>Next you will discover transferable skill.<br>Transferable skills build your resume and help make you a strong candidate interviewers.<br></h2>
+                <h4>Re-enter your login information.<h4>
+
             </div>
             <form class="personal-form" method="post">
                 <div class="form-item">
@@ -35,10 +36,10 @@
                     <p class="pPsd"></p>
                     <i class="iconfont icon-duigou1"></i>
                     <span class="toggle-password">👁️</span><br>
-                <!-- </div> <button class="register-button" type="button"
+                    <!-- </div> <button class="register-button" type="button"
                     onclick="location.href='/Users/diyayang/Coding/Dr.Thomas/StudentPersonalityDesign/register.html'"">Register</button> -->
 
-                <br><button class=" login-button" id="login_btn">Login</button>
+                    <br><button class=" login-button" id="login_btn">Login</button>
             </form>
         </div>
     </div>
@@ -104,6 +105,7 @@
 
     <!-- firebase configs -->
     <script type="module">
+        import Cookies from 'https://cdn.skypack.dev/js-cookie';
 
 
         // Import the functions you need from the SDKs you need
@@ -141,6 +143,7 @@
         const auth = getAuth(app);
 
 
+
         //refrences
 
         // // const username = document.getElementById('username');
@@ -149,31 +152,33 @@
         // const pass = document.getElementById('password1');
         const login_btn = document.getElementById('login_btn');
 
-       
-       
 
-     
+
+
+
 
         //login function
         function login() {
             event.preventDefault();
-    
+
 
             const email = document.getElementById('email').value;
-            const pass= document.getElementById('password1').value;
+            const pass = document.getElementById('password1').value;
             var username = localStorage.getItem('username');
-           // console.log(username);
+            // console.log(username);
 
             signInWithEmailAndPassword(auth, email, pass)
                 .then((userCredential) => {
+
                     // Signed in 
-                    const user = userCredential.user;
-                   
-                    console.log("dissss" + username);
-                    //console.log("ssss"+ username);
+                    //const user = userCredential.user;
+                    const uid = userCredential.user.uid;
+                    console.log(uid);
+                    Cookies.set('userUID', uid, { expires: 70 });
+
                     // You can use the Firebase user object here for other operations (fetching user data etc.)
-                    //alert('Login successful!');
-                    
+                    alert('Login successful!');
+
                     window.location.href = './question.html';
                     // Redirect to a different page or update UI here...
                 })
@@ -195,6 +200,7 @@
 
 
     </script>
+    
 
 
 

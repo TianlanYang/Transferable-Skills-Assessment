@@ -7,6 +7,7 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>Transferable Skills</title>
 	<link rel='stylesheet' href='./question.css'>
+	
 
 
 </head>
@@ -302,9 +303,19 @@
 	<!-- firebase -->
 	<script type='module'>
 		import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
+		import Cookies from 'https://cdn.skypack.dev/js-cookie';
+
 
 		import { getDatabase, get, set, update, remove, ref, child }
 			from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js';
+		import {
+			getAuth,
+			createUserWithEmailAndPassword,
+			signInWithEmailAndPassword,
+			onAuthStateChanged,
+			signOut
+		}
+			from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
 
 		// Your web app's Firebase configuration
@@ -323,6 +334,92 @@
 		const db = getDatabase(app);
 
 		const conversationInDb = ref(db);
+
+
+		//let currentUser = null;
+
+		document.addEventListener("DOMContentLoaded", function () {
+			// const auth = getAuth();
+			// currentUser = auth.currentUser;
+			const userUID = Cookies.get("userUID");
+
+			if (userUID) {
+				//const userUID = currentUser.uid;
+
+
+				// 使用用户的email从Firebase获取数据
+				const userRef = ref(db, '/UserList/' + userUID + '/Answers');
+				get(userRef).then((snapshot) => {
+					if (snapshot.exists()) {
+						const userData = snapshot.val();
+						fillFormWithUserData(userData);
+
+					} else {
+						console.log("No data available for this user.");
+					}
+				}).catch((error) => {
+					console.error("Error reading data:", error);
+				});
+			}
+		});
+
+
+		function fillFormWithUserData(userData) {
+			// 用userData填充表单
+			if (userData.Full_Name) document.getElementById('fullName').value = userData.Full_Name;
+			if (userData.Favorite_Sport) document.getElementById('sport').value = userData.Favorite_Sport;
+			if (userData.Position_In_Sport) document.getElementById('position').value = userData.Position_In_Sport;
+			if (userData.Favorite_Hobby) document.getElementById('hobby').value = userData.Favorite_Hobby;
+			if (userData.Second_Favorite_Hobby) document.getElementById('hobby2').value = userData.Second_Favorite_Hobby;
+			if (userData.Favorite_Subject) document.getElementById('subject').value = userData.Favorite_Subject;
+			if (userData.Goals1) document.getElementById('goals1').value = userData.Goals1;
+			if (userData.Goals2) document.getElementById('goals2').value = userData.Goals2;
+			if (userData.Goals3) document.getElementById('goals3').value = userData.Goals3;
+			if (userData.Support_person1) document.getElementById('support_person1').value = userData.Support_person1;
+			if (userData.Support_person2) document.getElementById('support_person2').value = userData.Support_person2;
+
+			if (userData.Support_person1_email) document.getElementById('support_person1_email').value = userData.Support_person1_email;
+			if (userData.Support_person2_email) document.getElementById('support_person2_email').value = userData.Support_person2_email;
+			if (userData.Student_email) document.getElementById('student_email').value = userData.Student_email;
+
+
+
+			if (userData.Good_Gpa) {
+				setRadioButtonValue('gpa_option', userData.Good_Gpa);
+
+			}
+			if (userData.Aware_Major) {
+				setRadioButtonValue('major_option', userData.Aware_Major);
+			}
+			if (userData.Taken_Courses) {
+				setRadioButtonValue('courses_option', userData.Taken_Courses);
+			}
+			if (userData.Pursue_Ppl) {
+				setRadioButtonValue('ppl_option', userData.Pursue_Ppl);
+			}
+			if (userData.Dream_Company) {
+				setRadioButtonValue('company_option', userData.Dream_Company);
+			}
+
+		}
+
+
+		function setRadioButtonValue(name, value) {
+			const radioButtons = document.querySelectorAll(`input[name ="${name}"]`);
+			radioButtons.forEach(rb => {
+				if (rb.value === value) {
+					rb.checked = true;
+				} else {
+					rb.checked = false;
+				}
+			});
+		}
+
+
+
+
+
+
 
 
 		//reference
@@ -382,10 +479,17 @@
 			event.preventDefault();
 			let form = document.getElementById('surveyForm'); // 将'yourFormID'替换为你的表单ID
 
+
+			// if (!currentUser) {
+			// 	alert('User not logged in. Please log in and try again.');
+			// 	return;
+			// }
 			if (!form.checkValidity()) {
 				// 表单无效，由于我们使用了 preventDefault，浏览器将显示验证消息。
 				return;
 			}
+
+
 			//console.log('inserData works');
 			let gpa_value = document.querySelector('input[name="gpa_option"]:checked')?.value;
 			let major_value = document.querySelector('input[name="major_option"]:checked')?.value;
@@ -394,7 +498,16 @@
 			let company_value = document.querySelector('input[name="company_option"]:checked')?.value;
 
 
-			set(ref(db, '/UserList/' + fullName.value + '/Answers'), {
+
+			const userUID = Cookies.get('userUID');
+			console.log(userUID);
+			if (!userUID) {
+				console.error("UID not found in local storage. Please ensure you're logged in.");
+				return;
+			}
+
+			//const userUID = currentUser.uid;
+			set(ref(db, '/UserList/' + userUID + '/Answers'), {
 
 
 				//Name: name.value,
@@ -430,14 +543,14 @@
 				Support_person2: support_person2.value,
 				Support_person1_email: support_person1_email.value,
 				Support_person2_email: support_person2_email.value,
-				Student_email:student_email.value
+				Student_email: student_email.value
 
 			})
 				.then(() => {
 					//alert('data stored sucessfully!')
-					const fullNameValue = document.getElementById('fullName').value;
-					localStorage.setItem('fullName', fullNameValue);
-					console.log('hhhhhhhh' + support_person1_email.value);
+					// const fullNameValue = document.getElementById('fullName').value;
+					// localStorage.setItem('fullName', fullNameValue);
+					// console.log('hhhhhhhh' + support_person1_email.value);
 					window.location.href = './result.html';
 				})
 				.catch((error) => {
@@ -457,6 +570,7 @@
 	<script src="./js/dropDownPosition.js"></script>
 
 	<script src="./js/firstLetterCaptial.js"></script>
+	
 
 </body>
 
