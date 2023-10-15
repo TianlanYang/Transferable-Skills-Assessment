@@ -434,14 +434,14 @@
 
 			})
 				.then(() => {
-					alert('data stored sucessfully!')
+					//alert('data stored sucessfully!')
 					const fullNameValue = document.getElementById('fullName').value;
 					localStorage.setItem('fullName', fullNameValue);
 					console.log('hhhhhhhh' + support_person1_email.value);
 					window.location.href = './result.html';
 				})
 				.catch((error) => {
-					alert('Uncessfully stored!' + error)
+					//alert('Uncessfully stored!' + error)
 				});
 
 		}
