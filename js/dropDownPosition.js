@@ -8,7 +8,7 @@ var sportPositions = {
     'Basketball': ['','Point Guard', ,'Shooting Guard','Small Forward', 'Power Forward','Center'],
     'Bowling': ['N/A'],
     'Cheerleading': ['','Flyer', 'Base', 'Spotter','Tumbler','Backspot','Front spot'],
-    'Cross Country': ['','Varsity Runner', 'Jr Varsity Runner', 'Pacer'],
+    'Cross Country': ['','Varsity Runner', 'Jr Varsity Runner'],
     'Dance Team': ['','Choreographer', 'Section Leader'],
     'Field Hockey': ['','Goalkeeper','Defenders','Center-Back','Fullbacks','Midfielders','Center Midfielder','Wingers','Forwards','Strikers','Center Forward'],
     'Football': ['','Quarterback', 'Running Back', 'Wide Receiver' ,'Tight End','Offensive Lineman','Defensive Lineman','Linebacker','Cornerback', 'Safety','Kicker/Punter'],
