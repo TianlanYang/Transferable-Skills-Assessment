@@ -6349,6 +6349,15 @@
                             div_id3_2_1_Content = jsonData[24][communicationKey];
                         }
 
+                        if (sportValue === "Hiking") {
+                            const pElement = div_id3_2_1.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[25])[0];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_1_Content = jsonData[25][communicationKey];
+                        }
+
                         // Rest of your code for event listeners
                         div_id3_2_1.addEventListener("mouseenter", () => {
                             if (div_id3_2_1_Content) {
@@ -6587,6 +6596,15 @@
                                 pElement.textContent = communicationKey;
                             }
                             div_id3_2_2_Content = jsonData[24][communicationKey];
+                        }
+
+                        if (sportValue === "Hiking") {
+                            const pElement = div_id3_2_2.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[25])[1];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_2_Content = jsonData[25][communicationKey];
                         }
 
 
@@ -6831,6 +6849,14 @@
                             div_id3_2_3_Content = jsonData[24][communicationKey];
                         }
 
+                        if (sportValue === "Hiking") {
+                            const pElement = div_id3_2_3.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[25])[2];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_3_Content = jsonData[25][communicationKey];
+                        }
 
                         div_id3_2_3.addEventListener("mouseenter", () => {
                             // const contentKey = "Basketball"; // Update this with your actual content key
@@ -7074,6 +7100,14 @@
                             div_id3_2_4_Content = jsonData[24][communicationKey];
                         }
 
+                        if (sportValue === "Hiking") {
+                            const pElement = div_id3_2_4.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[25])[3];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_4_Content = jsonData[25][communicationKey];
+                        }
 
                         div_id3_2_4.addEventListener("mouseenter", () => {
                             if (div_id3_2_4_Content) {
@@ -7314,6 +7348,14 @@
                             div_id3_2_5_Content = jsonData[24][communicationKey];
                         }
 
+                        if (sportValue === "Hiking") {
+                            const pElement = div_id3_2_5.nextElementSibling;
+                            const communicationKey = Object.keys(jsonData[25])[4];
+                            if (pElement && pElement.tagName === "P") {
+                                pElement.textContent = communicationKey;
+                            }
+                            div_id3_2_5_Content = jsonData[25][communicationKey];
+                        }
 
                         div_id3_2_5.addEventListener("mouseenter", () => {
                             if (div_id3_2_5_Content) {
