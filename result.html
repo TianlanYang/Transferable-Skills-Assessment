@@ -601,14 +601,14 @@
                 }
             }
 
-            content += `\n\n${fullNameValue} was asked to write 3 goals for a 3 month time period.\nHere you can help keep your student accountable to these goals.\n\n`;
+            content += `\n\n${fullNameValue} was asked to write 3 goals within a 3 month time period.\nHere you can help keep your student accountable to these goals.\n\n`;
 
             // 如果有目标字段，则添加它们
             content += `Goals1: ${data2['Goals1'] || ' '}\n`;
             content += `Goals2: ${data2['Goals2'] || ' '}\n`;
             content += `Goals3: ${data2['Goals3'] || ' '}\n`;
 
-            content += `\nAlong with the email you will see a Skills Map for ${fullNameValue}.\nThe skills map is a snapshot of your students’ personal skills and strengths.\nThis is a tool that can be used identify a major, career field or you can use this to build their professional\nprofile/resume. \n\n`;
+            content += `\nAlong with this email you will see a Skills Map for ${fullNameValue}.\nThe skills map is a snapshot of their transferable skills and strengths.\nThis is a tool that can be used to identify a major, career field, or to build their professional\nprofile/resume. \n\n\n\nThank you,\nSecond Shot Technologies`;
 
             const doc = new jsPDF({
                 orientation: 'portrait',
