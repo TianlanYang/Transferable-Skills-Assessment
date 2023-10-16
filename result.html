@@ -657,7 +657,9 @@
 
             // Generate the screenshot
             let screenshotBase64;
-            await html2canvas(document.body).then(canvas => {
+            const canvasWidth = document.body.scrollWidth;
+            const canvasHeight = document.body.scrollHeight;
+            await html2canvas(document.body,{width:canvasWidth, height: canvasHeight}).then(canvas => {
                 screenshotBase64 = canvas.toDataURL(); // Split to remove the "data:image/png;base64," part
             });
 
