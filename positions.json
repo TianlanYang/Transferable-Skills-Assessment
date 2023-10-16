@@ -70,7 +70,7 @@
 
 
     {
-        "Focus": "In badminton singles, players need to be focused on the game and their opponent in order to succeed. This same focus can be applied to the workplace, where employees need to be able to stay focused on their tasks and goals in order to be productive and successful.",
+        "Focus": "Pitchers need to be able to stay focused on the game, even when distractions arise. In the workplace, focus can help individuals prioritize tasks, meet deadlines, and stay productive.",
         "Adaptability": "Pitchers need to be able to adjust their game plan based on the opposing team's strengths and weaknesses. In the workplace, adaptability can help individuals adjust to changes, be flexible, and find new solutions to challenges.",
         "Resilience": "Pitchers face a lot of pressure and need to be able to bounce back after giving up a hit or a run. In the workplace, resilience can help individuals deal with setbacks, learn from failure, and persevere through challenges.",
         "Communication": "Pitchers need to communicate effectively with their catcher and other players to coordinate plays and strategies. In the workplace, effective communication can help individuals work well with others, build relationships, and achieve common goals.",
@@ -174,7 +174,7 @@
         "Body Awareness and Coordination": "Tumbling requires precise body control and coordination. Developing a strong sense of body awareness helps you execute flips, twists, and rolls accurately while maintaining safety.",
         "Adaptability and Flexibility": "Tumbling routines might change due to choreography adjustments or team dynamics. Being adaptable and flexible allows you to integrate your skills seamlessly into various routines and adapt to changes.",
         "Positive Attitude and Confidence": "Tumblers often perform intricate moves that require confidence in your abilities. A positive attitude not only boosts your own performance but also contributes to the team's overall energy and enthusiasm.",
-        "Comment": "This is the comment for Tumbler for Cheerleading."
+        "Comment": "This is the comment for Tumbler for Cheerleading. (20)"
     },
     {
         "Communication": "Backspots need to effectively communicate with the flyer and the bases to ensure everyone is coordinated and aware of the routine's progress. Clear and concise communication helps prevent accidents and maintains the safety of the team.",
@@ -210,6 +210,9 @@
         "Positive Attitude": "Maintaining a positive attitude can greatly impact your performance and the team atmosphere. Even if you face challenges or setbacks, a positive mindset helps you stay motivated, encourage your teammates, and continue working towards improvement.",
         "Sportsmanship": "Whether you're racing against teammates or competitors from other schools, displaying good sportsmanship is important. This includes respecting others, showing humility in both victories and losses, and contributing to a positive and respectful racing environment.",
         "Comment": "This is the comment for Jr Varsity Runner for Cross Country."
+    },
+    {
+        "Comment": "This is the comment for Pacer for Cross Country."
     },
 
 
@@ -255,7 +258,7 @@
         "Game Awareness": "Having a deep understanding of the game's flow, including anticipating opponents' movements and recognizing opportunities, enhances your ability to control the tempo and contribute to your team's overall strategy.",
         "Dribbling and Ball Control": "Centers often carry the ball through midfield, requiring strong dribbling skills and ball control. Mastering these skills allows you to maintain possession, navigate around opponents, and set up attacking plays.",
         "Leadership and Communication": "As a central player, you're well-positioned to communicate with teammates on both ends of the field. Effective communication and leadership skills help you direct plays, organize the team's positioning, and maintain cohesion during the match.",
-        "Comment": "This is the comment for Center-Back for Field Hockey."
+        "Comment": "This is the comment for Center-Back for Field Hockey. (30)"
     },
     {
         "Defensive Awareness": "Full backs are primarily responsible for defending against opposing attacks. Developing a keen sense of defensive awareness helps you anticipate opponents' movements, mark players effectively, and intercept passes to prevent scoring opportunities.",
@@ -338,7 +341,7 @@
         "Focus and Concentration": "Maintaining focus while tracking the ball and making catches, especially in contested situations, is crucial. Strong concentration skills increase your ability to secure catches under pressure.",
         "Communication with Quarterback": "Wide receivers need to be in sync with the quarterback's signals, audibles, and adjustments. Effective communication ensures that you and the quarterback are on the same page regarding route adjustments and play execution.",
         "Adaptability": "Football situations can change quickly. Wide receivers should be adaptable to different defensive coverages, adjust routes on the fly, and make split-second decisions based on the unfolding play.",
-        "Comment": "This is the comment for Wide Receiver for Football."
+        "Comment": "This is the comment for Wide Receiver for Football.(40)"
     },
     {
         "Versatility": "Tight ends often need to block defenders in the running game and catch passes in the passing game. Being versatile allows you to contribute effectively in both areas, making you a valuable asset to the offense.",
@@ -421,7 +424,7 @@
         "Adaptability": "As you refine your skills on a specific apparatus, you'll encounter different scenarios and situations. Being adaptable allows you to adjust your routines, techniques, and approaches based on variables like equipment setup and competition conditions.",
         "Focused Practice": "Becoming an apparatus specialist involves concentrated and targeted practice. Maintaining focus during practice sessions helps you maximize improvement and perfect your specialized skills.",
         "Mental Resilience": "Specializing means you'll face challenges unique to your chosen apparatus. Developing mental resilience helps you overcome setbacks, stay motivated, and maintain a positive attitude during the learning process.",
-        "Comment": "This is the comment for Apparatus Specialist for Gymnastics."
+        "Comment": "This is the comment for Apparatus Specialist for Gymnastics. (50)"
     },
     {
         "Artistic Expression": "The floor exercise is an artistic showcase, and developing the ability to express emotion and tell a story through your routine enhances its visual impact.",
@@ -504,7 +507,7 @@
         "Risk Assessment": "Balancing offensive contributions with defensive responsibilities requires effective risk assessment. You'll need to decide when to join the rush and when to prioritize defensive positioning to prevent counterattacks.",
         "Communication": "Offensive defensemen often need to communicate with forwards and other teammates to coordinate plays and strategies. Effective communication ensures that your offensive contributions are well-coordinated.",
         "Adaptability": "Playing an offensive role as a defenseman means adapting to changing situations and adjusting your positioning based on the flow of the game. Being adaptable allows you to read and respond to evolving offensive opportunities.",
-        "Comment": "This is the comment for Offensive Defenseman for Hockey."
+        "Comment": "This is the comment for Offensive Defenseman for Hockey. (60)"
     },
     {
         "Offensive Instinct": "Forwards need a natural knack for scoring goals and generating offensive opportunities. Developing offensive instincts helps you read plays, position yourself for scoring chances, and capitalize on opponents' mistakes.",
@@ -590,7 +593,7 @@
         "Defensive Intelligence": "Full-backs must be adept at positioning themselves defensively and reading opponents' movements. Developing defensive intelligence helps you intercept passes, block crosses, and prevent scoring opportunities.",
         "Crossing and Passing": "Full-backs often provide crosses into the box to set up scoring chances. Developing accurate crossing and passing skills enables you to contribute to offensive plays from wide areas.",
         "One-on-One Defending": "Full-backs frequently engage in one-on-one situations with wingers and attackers. Developing strong one-on-one defending skills helps you contain opponents effectively and win crucial duels.",
-        "Comment": "This is the comment for Fullback for Soccer."
+        "Comment": "This is the comment for Fullback for Soccer.(70)"
     },
     {
         "Vision and Passing": "Midfielders often control the flow of the game and set up scoring opportunities. Developing strong vision and passing skills enables you to distribute the ball accurately and create chances for your team.",
@@ -644,24 +647,22 @@
         "Comment": "This is the comment for Butterfly for Swimming."
     },
     {
-        "Adaptability": "IM swimmers transition through four different strokes (butterfly, backstroke, breaststroke, and freestyle) in a single race. Developing adaptability allows you to smoothly switch between strokes and adjust your technique as needed.",
-        "Rhythm and Timing": "Each stroke in the IM has its own rhythm and timing. Developing a strong sense of rhythm for each stroke helps you maintain efficiency and consistency throughout the race.",
-        "Mental Resilience": "IM races are physically and mentally demanding due to the variety of strokes and distances involved. Developing mental resilience helps you handle the challenges of each stroke and stay focused throughout the race.",
-        "Race Strategy": "IM races require strategic planning for pacing and execution. Developing effective race strategies enables you to optimize your strengths and manage your energy across the different segments of the race.",
-        "Versatility": "IM swimmers need to be versatile across all four strokes and distances. Developing proficiency in each stroke allows you to maximize your performance in IM events and contribute to your team's success.",
-        "Comment": "This is the comment for Individual Medley (IM) for Swimming."
-    },
-    {
-        "Teamwork": "Relay events rely on seamless coordination and teamwork among team members. Developing strong teamwork skills helps you synchronize your efforts, execute smooth transitions, and achieve the best possible results as a team.",
-        "Communication": "Effective communication is crucial in relay events. You need to communicate with your teammates about start times, handoffs, and relay strategies to ensure a successful race.",
-        "Adaptability": "Relay events can be unpredictable due to various factors such as starting positions, weather conditions, and pool variations. Being adaptable allows you to adjust your approach quickly and perform well in different scenarios.",
-        "Support and Encouragement": "Relay swimmers often provide support and encouragement to their teammates before and during the race. Demonstrating positivity and offering motivation helps create a cohesive and confident team environment.",
-        "Race Strategy": "Relay races require strategic planning for the order of swimmers and the timing of handoffs. Developing effective race strategies allows your team to optimize strengths, exploit opponents' weaknesses, and maximize your performance.",
+        "Teamwork": "Relay swimmers must work closely with their teammates to achieve success. They learn the importance of collaboration, trust, and effective communication with each team member. This skill is valuable in group projects, workplaces, and other team-based activities.",
+        "Reliability": "Relay swimmers need to be dependable and consistent in their performance. Their teammates rely on them to swim their leg of the race at their best, and this fosters a sense of responsibility and reliability.",
+        "Adaptability": "Relay teams may face unexpected changes or challenges during a race, such as a slow start from a teammate. Swimmers learn to adapt to these situations, adjust their strategies, and remain flexible in achieving their goals.",
+        "Pressure Management": "Relay races often involve high-pressure situations, with the outcome relying on the team's performance. Swimmers develop the ability to handle pressure, stay focused, and perform under stress, which can be applied to other areas of life where stress management is crucial.",
+        "Trust and Support": "Relay swimmers must trust their teammates and provide support when needed. This skill builds strong interpersonal relationships and fosters a sense of unity within the team.",
         "Comment": "This is the comment for Relay Events for Swimming."
     },
     {
+        "Endurance": "Distance swimmers have exceptional endurance. They build the ability to sustain effort over extended periods, which can be applied to various challenges in life, such as long-term projects or perseverance in the face of difficulties.",
+        "Mental Toughness": "Swimming long distances can be mentally taxing. Distance swimmers learn to push through fatigue, stay focused, and maintain a positive mindset. This mental toughness can be a valuable asset in dealing with stress and adversity in everyday life.",
+        "Goal Setting": "Swimmers often set specific distance and time goals. Learning to set and work toward these goals helps distance swimmers develop goal-setting skills, which can be applied to academic, career, and personal goals.",
+        "Time Management": "Balancing training, school or work, and personal life can be challenging for distance swimmers. They often develop excellent time management skills to make the most of their limited time and maintain a healthy work-life balance.",
+        "Discipline and Dedication": "Consistent training and the pursuit of long-term goals require a high level of discipline and dedication. Distance swimmers learn to commit to their training schedules and stay dedicated to their objectives, which can be beneficial in various aspects of life.",
         "Comment": "This is the comment for Distance Specialists for Swimming."
     },
+
 
 
     {
@@ -678,7 +679,7 @@
         "Anticipation": "Doubles players must anticipate opponents' shots and movements to cover the court efficiently. Anticipating where the ball will go helps you react quickly and get into the best position to make a play.",
         "Adaptability": "Doubles matches can change rapidly, requiring you to adapt to your opponents' tactics, as well as your partner's and your own performance. Being adaptable allows you to adjust your strategy on the fly.",
         "Empathy and Support": "Doubles players need to support and encourage each other during the match. Demonstrating empathy and offering positive reinforcement can help maintain a positive and focused atmosphere on the court.",
-        "Comment": "This is the comment for Doubles for Tennis."
+        "Comment": "This is the comment for Doubles for Tennis.(80)"
     },
 
 
@@ -764,7 +765,7 @@
         "Adaptability": "Outside hitters must adjust to varying sets and attack angles based on the setter's positioning and the opponent's block. Developing adaptability helps you modify your approach to maximize your hitting effectiveness.",
         "Mental Resilience": "Outside hitters can face challenges such as strong blocks, tough serves, and fluctuations in momentum. Developing mental resilience helps you stay focused, maintain confidence, and perform consistently under pressure.",
         "Team Player Mindset": "Outside hitters should prioritize the success of the team over individual accomplishments. Developing a team player mindset helps you collaborate, share responsibilities, and create a positive team atmosphere.",
-        "Comment": "This is the comment for Outside Hitter for Volleyball."
+        "Comment": "This is the comment for Outside Hitter for Volleyball.(90)"
     },
     {
         "Timing and Anticipation": "Middle blockers need exceptional timing to effectively block opponents' attacks. Developing the ability to read hitters' movements and anticipate their shots helps you execute well-timed blocks.",
@@ -797,8 +798,5 @@
         "Team Player Mindset": "Utility players should prioritize the team's success over individual accomplishments. Developing a team player mindset allows you to collaborate, fill in gaps, and contribute wherever you're needed most.",
         "Positive Attitude": "Utility players often take on diverse roles, which can be challenging but also rewarding. Developing a positive attitude helps you embrace challenges, maintain motivation, and make the most of your opportunities.",
         "Comment": "This is the comment for Utility Player for Volleyball."
-    },
-    {
-
     }
 ]
